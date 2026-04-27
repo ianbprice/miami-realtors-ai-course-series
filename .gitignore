@@ -1,0 +1,13 @@
+# Local/private source materials
+source-pdfs/
+private/
+
+# Temporary outputs
+tmp/
+.cache/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
