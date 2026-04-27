@@ -1,0 +1,1348 @@
+[
+  {
+    "number": 1,
+    "slug": "course-01-ai-for-real-estate-sales",
+    "title": "AI for Real Estate Sales: From Confusion to Daily Use",
+    "promise": "Turn AI from a confusing novelty into a practical daily sales assistant.",
+    "audience": "Realtors who are curious about AI but not yet using it consistently.",
+    "objectives": [
+      "Explain what AI can and cannot do in real estate sales.",
+      "Draft better client emails, texts, listing copy, and updates.",
+      "Prepare for buyer/seller appointments and common objections.",
+      "Build a simple daily AI workflow.",
+      "Use AI safely with privacy, accuracy, and Fair Housing guardrails."
+    ],
+    "slides": [
+      {
+        "kind": "cover",
+        "title": "AI for Real Estate Sales: From Confusion to Daily Use",
+        "subtitle": "Miami Realtors AI Course Series",
+        "bullets": [
+          "Turn AI from a confusing novelty into a practical daily sales assistant.",
+          "Audience: Realtors who are curious about AI but not yet using it consistently."
+        ],
+        "notes": "Welcome the room, set the practical tone, and frame the class as useful even for agents who do not consider themselves technical."
+      },
+      {
+        "kind": "promise",
+        "title": "The Promise",
+        "subtitle": "Turn AI from a confusing novelty into a practical daily sales assistant.",
+        "bullets": [
+          "Practical examples, not theory.",
+          "Reusable prompts and workflows.",
+          "Professional judgment stays in the driver's seat."
+        ],
+        "notes": "Tell attendees they do not need to master every AI tool. The win is leaving with repeatable workflows."
+      },
+      {
+        "kind": "map",
+        "title": "Today at a Glance",
+        "subtitle": "Built for a 2-hour class; core modules total about 150 minutes plus exercises and discussion.",
+        "bullets": [
+          "Welcome and AI Reality Check",
+          "What AI Can and Cannot Do",
+          "AI for Client Communication",
+          "AI for Lead Follow-Up",
+          "AI for Listings, Sellers, and Marketing",
+          "AI for Appointment Prep",
+          "Daily AI Workflow",
+          "Safe and Professional AI Use"
+        ],
+        "notes": "Preview the path so attendees know the class will stay concrete and paced."
+      },
+      {
+        "kind": "safety",
+        "title": "Professional Guardrails",
+        "subtitle": "AI helps draft and organize. You still verify, edit, and decide.",
+        "bullets": [
+          "Protect client privacy.",
+          "Verify facts before sending.",
+          "Avoid Fair Housing risk.",
+          "Do not outsource licensed judgment."
+        ],
+        "notes": "Set this expectation early so the rest of the class can be practical without sounding reckless."
+      },
+      {
+        "kind": "section",
+        "title": "1. Welcome and AI Reality Check",
+        "subtitle": "10 minutes",
+        "bullets": [
+          "AI is useful when agents give it a job, context, and review."
+        ],
+        "notes": "Open with permission to be practical. Joke lightly that AI has confidence issues."
+      },
+      {
+        "kind": "idea",
+        "title": "AI is useful when agents give it a job, context, and review.",
+        "subtitle": "Welcome and AI Reality Check",
+        "bullets": [
+          "Not magic: drafting, organizing, rewriting, role-play.",
+          "Not a replacement: broker judgment, legal advice, local expertise.",
+          "Best first move: give AI one annoying repeatable task."
+        ],
+        "notes": "Talk track: Open with permission to be practical. Joke lightly that AI has confidence issues."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "Welcome and AI Reality Check",
+        "bullets": [
+          "Not magic: drafting, organizing, rewriting, role-play.",
+          "Not a replacement: broker judgment, legal advice, local expertise.",
+          "Best first move: give AI one annoying repeatable task."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Show a rough buyer-call note becoming a polished follow-up.",
+        "bullets": [
+          "Ask attendees to name one task they avoid every week.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "2. What AI Can and Cannot Do",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "AI accelerates thinking; it does not verify reality."
+        ],
+        "notes": "Reinforce that the agent's license and judgment stay in the loop."
+      },
+      {
+        "kind": "idea",
+        "title": "AI accelerates thinking; it does not verify reality.",
+        "subtitle": "What AI Can and Cannot Do",
+        "bullets": [
+          "Good at language, structure, options, summaries, and role-play.",
+          "Risky with facts, legal claims, market stats, and property details.",
+          "Human review is part of the workflow, not an optional step."
+        ],
+        "notes": "Talk track: Reinforce that the agent's license and judgment stay in the loop."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "What AI Can and Cannot Do",
+        "bullets": [
+          "Good at language, structure, options, summaries, and role-play.",
+          "Risky with facts, legal claims, market stats, and property details.",
+          "Human review is part of the workflow, not an optional step."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Compare a generic AI listing description with a revised version.",
+        "bullets": [
+          "Circle risky claims in an AI-generated property description.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "3. AI for Client Communication",
+        "subtitle": "25 minutes",
+        "bullets": [
+          "Better context creates messages that sound more like the agent."
+        ],
+        "notes": "Keep the live demo short. The win is showing before/after quality."
+      },
+      {
+        "kind": "idea",
+        "title": "Better context creates messages that sound more like the agent.",
+        "subtitle": "AI for Client Communication",
+        "bullets": [
+          "Audience: buyer, seller, lead, past client.",
+          "Context: situation, property, timeline, concern.",
+          "Tone: warm, concise, professional, direct."
+        ],
+        "notes": "Talk track: Keep the live demo short. The win is showing before/after quality."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "AI for Client Communication",
+        "bullets": [
+          "Audience: buyer, seller, lead, past client.",
+          "Context: situation, property, timeline, concern.",
+          "Tone: warm, concise, professional, direct.",
+          "Goal: reply, clarity, appointment, next step."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Draft a seller update after a quiet week of showings.",
+        "bullets": [
+          "Rewrite a robotic text into a natural agent voice.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "4. AI for Lead Follow-Up",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "Lead follow-up improves when it is fast, specific, and useful."
+        ],
+        "notes": "Mention that tools like GoHouse.ai can support lead context, then move on."
+      },
+      {
+        "kind": "idea",
+        "title": "Lead follow-up improves when it is fast, specific, and useful.",
+        "subtitle": "AI for Lead Follow-Up",
+        "bullets": [
+          "Reference what the lead actually did or asked.",
+          "Ask one easy question.",
+          "Offer value before asking for a meeting."
+        ],
+        "notes": "Talk track: Mention that tools like GoHouse.ai can support lead context, then move on."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "AI for Lead Follow-Up",
+        "bullets": [
+          "Reference what the lead actually did or asked.",
+          "Ask one easy question.",
+          "Offer value before asking for a meeting.",
+          "Save reusable prompts for common lead types."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Create a response to a synthetic property inquiry lead.",
+        "bullets": [
+          "Write a follow-up for a buyer who went silent.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "5. AI for Listings, Sellers, and Marketing",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "AI turns raw property details into usable marketing drafts."
+        ],
+        "notes": "Warn against invented features. Facts first, polish second."
+      },
+      {
+        "kind": "idea",
+        "title": "AI turns raw property details into usable marketing drafts.",
+        "subtitle": "AI for Listings, Sellers, and Marketing",
+        "bullets": [
+          "Listing descriptions from verified bullet points.",
+          "Open house invitations and email announcements.",
+          "Seller-facing activity summaries."
+        ],
+        "notes": "Talk track: Warn against invented features. Facts first, polish second."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "AI for Listings, Sellers, and Marketing",
+        "bullets": [
+          "Listing descriptions from verified bullet points.",
+          "Open house invitations and email announcements.",
+          "Seller-facing activity summaries.",
+          "Social captions with different tones."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Turn five property facts into a listing description and three captions.",
+        "bullets": [
+          "Create a seller-facing summary from showing feedback.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "6. AI for Appointment Prep",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "AI can help agents practice before the real conversation."
+        ],
+        "notes": "Make this interactive. Let the room choose the objection."
+      },
+      {
+        "kind": "idea",
+        "title": "AI can help agents practice before the real conversation.",
+        "subtitle": "AI for Appointment Prep",
+        "bullets": [
+          "Buyer consultation agendas.",
+          "Listing appointment talking points.",
+          "Objection role-play."
+        ],
+        "notes": "Talk track: Make this interactive. Let the room choose the objection."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "AI for Appointment Prep",
+        "bullets": [
+          "Buyer consultation agendas.",
+          "Listing appointment talking points.",
+          "Objection role-play.",
+          "Plain-English market explanations."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Role-play a seller who wants to overprice.",
+        "bullets": [
+          "Build a checklist for a first-time buyer consultation.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "7. Daily AI Workflow",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "AI sticks when it is attached to the day, not treated as homework."
+        ],
+        "notes": "This is the behavioral close. Keep it simple and repeatable."
+      },
+      {
+        "kind": "idea",
+        "title": "AI sticks when it is attached to the day, not treated as homework.",
+        "subtitle": "Daily AI Workflow",
+        "bullets": [
+          "Morning: prioritize and prep.",
+          "Midday: draft follow-up.",
+          "Afternoon: content or client updates."
+        ],
+        "notes": "Talk track: This is the behavioral close. Keep it simple and repeatable."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "Daily AI Workflow",
+        "bullets": [
+          "Morning: prioritize and prep.",
+          "Midday: draft follow-up.",
+          "Afternoon: content or client updates.",
+          "End of day: summarize notes and next steps."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Build a sample day plan from a fictional agent task list.",
+        "bullets": [
+          "Each attendee chooses a daily AI habit.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "8. Safe and Professional AI Use",
+        "subtitle": "15 minutes",
+        "bullets": [
+          "The safest AI workflow is private, verified, compliant, and human."
+        ],
+        "notes": "End with confidence, not fear. Safety makes AI more usable."
+      },
+      {
+        "kind": "idea",
+        "title": "The safest AI workflow is private, verified, compliant, and human.",
+        "subtitle": "Safe and Professional AI Use",
+        "bullets": [
+          "Do not paste sensitive client data into public tools.",
+          "Verify facts, stats, and property details.",
+          "Avoid Fair Housing risk in marketing language."
+        ],
+        "notes": "Talk track: End with confidence, not fear. Safety makes AI more usable."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "Safe and Professional AI Use",
+        "bullets": [
+          "Do not paste sensitive client data into public tools.",
+          "Verify facts, stats, and property details.",
+          "Avoid Fair Housing risk in marketing language.",
+          "Keep the agent voice and final review."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Review a risky generated neighborhood blurb.",
+        "bullets": [
+          "Create a personal AI safety checklist.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "takeaways",
+        "title": "What to Take Back to Your Business",
+        "subtitle": "Pick one workflow and make it repeatable.",
+        "bullets": [
+          "Remove sensitive client information before prompting.",
+          "Provide verified facts and avoid asking AI to invent details.",
+          "Give AI audience, context, tone, format, and goal.",
+          "Review before sending anything to a client.",
+          "Save prompts that work."
+        ],
+        "notes": "Use this slide to transition from learning into implementation."
+      },
+      {
+        "kind": "action",
+        "title": "Your 7-Day Action Plan",
+        "subtitle": "Small, specific, and actually doable.",
+        "bullets": [
+          "Pick one repetitive communication task.",
+          "Write one reusable prompt for it.",
+          "Use it three times this week.",
+          "Save the best output as a template."
+        ],
+        "notes": "Have attendees write down one action before leaving. This is the close."
+      }
+    ],
+    "prompts": [
+      "You are helping me as a Realtor draft a [message type] for [audience]. Context: [facts]. Tone: [tone]. Goal: [next step].",
+      "Rewrite this so it sounds like a helpful local Realtor, not a corporate robot: [paste draft].",
+      "Create three versions: concise text, warm email, and phone script.",
+      "Review this for factual claims, Fair Housing risk, and anything I should verify before sending."
+    ],
+    "checklist": [
+      "Remove sensitive client information before prompting.",
+      "Provide verified facts and avoid asking AI to invent details.",
+      "Give AI audience, context, tone, format, and goal.",
+      "Review before sending anything to a client.",
+      "Save prompts that work."
+    ],
+    "action_plan": [
+      "Pick one repetitive communication task.",
+      "Write one reusable prompt for it.",
+      "Use it three times this week.",
+      "Save the best output as a template."
+    ]
+  },
+  {
+    "number": 2,
+    "slug": "course-02-ai-lead-conversion",
+    "title": "AI Lead Conversion: How to Turn More Online Leads Into Appointments",
+    "promise": "Use AI to turn internet lead activity into real conversations and appointments.",
+    "audience": "Realtors who receive portal, IDX, website, open house, ad, or CRM leads.",
+    "objectives": [
+      "Explain why online leads often fail to convert.",
+      "Write stronger first responses for different lead types.",
+      "Identify intent signals that suggest urgency.",
+      "Move from answering questions to setting appointments.",
+      "Practice objections with AI role-play."
+    ],
+    "slides": [
+      {
+        "kind": "cover",
+        "title": "AI Lead Conversion: How to Turn More Online Leads Into Appointments",
+        "subtitle": "Miami Realtors AI Course Series",
+        "bullets": [
+          "Use AI to turn internet lead activity into real conversations and appointments.",
+          "Audience: Realtors who receive portal, IDX, website, open house, ad, or CRM leads."
+        ],
+        "notes": "Welcome the room, set the practical tone, and frame the class as useful even for agents who do not consider themselves technical."
+      },
+      {
+        "kind": "promise",
+        "title": "The Promise",
+        "subtitle": "Use AI to turn internet lead activity into real conversations and appointments.",
+        "bullets": [
+          "Practical examples, not theory.",
+          "Reusable prompts and workflows.",
+          "Professional judgment stays in the driver's seat."
+        ],
+        "notes": "Tell attendees they do not need to master every AI tool. The win is leaving with repeatable workflows."
+      },
+      {
+        "kind": "map",
+        "title": "Today at a Glance",
+        "subtitle": "Built for a 2-hour class; core modules total about 150 minutes plus exercises and discussion.",
+        "bullets": [
+          "The Online Lead Problem",
+          "Speed-to-Lead Is Not Enough",
+          "Lead Types and Response Strategy",
+          "AI for First Contact Scripts",
+          "Intent Signals and Prioritization",
+          "Turning Replies Into Appointments",
+          "AI Role-Play and Objection Handling",
+          "Measurement and Improvement"
+        ],
+        "notes": "Preview the path so attendees know the class will stay concrete and paced."
+      },
+      {
+        "kind": "safety",
+        "title": "Professional Guardrails",
+        "subtitle": "AI helps draft and organize. You still verify, edit, and decide.",
+        "bullets": [
+          "Protect client privacy.",
+          "Verify facts before sending.",
+          "Avoid Fair Housing risk.",
+          "Do not outsource licensed judgment."
+        ],
+        "notes": "Set this expectation early so the rest of the class can be practical without sounding reckless."
+      },
+      {
+        "kind": "section",
+        "title": "1. The Online Lead Problem",
+        "subtitle": "15 minutes",
+        "bullets": [
+          "Most leads do not fail because they are fake; they fail because follow-up is generic."
+        ],
+        "notes": "Use the midnight condo click joke if the room is warm."
+      },
+      {
+        "kind": "idea",
+        "title": "Most leads do not fail because they are fake; they fail because follow-up is generic.",
+        "subtitle": "The Online Lead Problem",
+        "bullets": [
+          "Low context.",
+          "Weak timing.",
+          "Too many copy-paste messages."
+        ],
+        "notes": "Talk track: Use the midnight condo click joke if the room is warm."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "The Online Lead Problem",
+        "bullets": [
+          "Low context.",
+          "Weak timing.",
+          "Too many copy-paste messages.",
+          "Agents give up before the lead is ready."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Compare a generic first response with a better appointment-oriented version.",
+        "bullets": [
+          "Rewrite 'Is this available?' into a conversation starter.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "2. Speed-to-Lead Is Not Enough",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "Fast matters, but fast and generic still feels automated."
+        ],
+        "notes": "Make speed-to-lead feel tactical, not abstract."
+      },
+      {
+        "kind": "idea",
+        "title": "Fast matters, but fast and generic still feels automated.",
+        "subtitle": "Speed-to-Lead Is Not Enough",
+        "bullets": [
+          "Acknowledge what they asked.",
+          "Answer only what is verified.",
+          "Ask one low-friction next question."
+        ],
+        "notes": "Talk track: Make speed-to-lead feel tactical, not abstract."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "Speed-to-Lead Is Not Enough",
+        "bullets": [
+          "Acknowledge what they asked.",
+          "Answer only what is verified.",
+          "Ask one low-friction next question.",
+          "Create a path to call, showing, or consultation."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Respond to a no-message IDX registration lead.",
+        "bullets": [
+          "Create a fast text, email, and voicemail for one lead.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "3. Lead Types and Response Strategy",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "Different leads deserve different first moves."
+        ],
+        "notes": "The point: segmentation can happen before a formal campaign."
+      },
+      {
+        "kind": "idea",
+        "title": "Different leads deserve different first moves.",
+        "subtitle": "Lead Types and Response Strategy",
+        "bullets": [
+          "Portal buyer lead.",
+          "IDX registration.",
+          "Property inquiry."
+        ],
+        "notes": "Talk track: The point: segmentation can happen before a formal campaign."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "Lead Types and Response Strategy",
+        "bullets": [
+          "Portal buyer lead.",
+          "IDX registration.",
+          "Property inquiry.",
+          "Home valuation lead.",
+          "Relocation or open house lead."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Match five lead types to five first-response styles.",
+        "bullets": [
+          "Have attendees choose the strongest first question for each lead.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "4. AI for First Contact Scripts",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "AI can draft the message set so agents can focus on the conversation."
+        ],
+        "notes": "Keep examples short enough to read on a phone."
+      },
+      {
+        "kind": "idea",
+        "title": "AI can draft the message set so agents can focus on the conversation.",
+        "subtitle": "AI for First Contact Scripts",
+        "bullets": [
+          "Text: short and specific.",
+          "Email: useful and contextual.",
+          "Voicemail: quick reason for the call."
+        ],
+        "notes": "Talk track: Keep examples short enough to read on a phone."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "AI for First Contact Scripts",
+        "bullets": [
+          "Text: short and specific.",
+          "Email: useful and contextual.",
+          "Voicemail: quick reason for the call.",
+          "Follow-up: one question, one next step."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Build a text, email, voicemail, and call opener from one lead note.",
+        "bullets": [
+          "Edit the outputs to sound less salesy.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "5. Intent Signals and Prioritization",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "AI can summarize clues, but the agent decides who gets attention first."
+        ],
+        "notes": "Tie this lightly to CRM/website workflows without pitching software."
+      },
+      {
+        "kind": "idea",
+        "title": "AI can summarize clues, but the agent decides who gets attention first.",
+        "subtitle": "Intent Signals and Prioritization",
+        "bullets": [
+          "Repeat visits.",
+          "Saved homes.",
+          "Showing requests."
+        ],
+        "notes": "Talk track: Tie this lightly to CRM/website workflows without pitching software."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "Intent Signals and Prioritization",
+        "bullets": [
+          "Repeat visits.",
+          "Saved homes.",
+          "Showing requests.",
+          "Payment or financing questions.",
+          "Timeline and relocation language."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Rank three synthetic leads from hot to long-term.",
+        "bullets": [
+          "Ask attendees what signal they trust most.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "6. Turning Replies Into Appointments",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "The appointment ask should feel like the natural next helpful step."
+        ],
+        "notes": "This is the core money slide. Spend time here."
+      },
+      {
+        "kind": "idea",
+        "title": "The appointment ask should feel like the natural next helpful step.",
+        "subtitle": "Turning Replies Into Appointments",
+        "bullets": [
+          "Soft ask: 'Would it be helpful if...'",
+          "Direct ask: 'The best next step is...'",
+          "Consultation ask."
+        ],
+        "notes": "Talk track: This is the core money slide. Spend time here."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "Turning Replies Into Appointments",
+        "bullets": [
+          "Soft ask: 'Would it be helpful if...'",
+          "Direct ask: 'The best next step is...'",
+          "Consultation ask.",
+          "Showing ask.",
+          "Phone-call ask."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Turn an information-only chat into an appointment request.",
+        "bullets": [
+          "Practice three appointment asks in different tones.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "7. AI Role-Play and Objection Handling",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "Practice makes agents calmer when real leads push back."
+        ],
+        "notes": "Keep the role-play friendly. Nobody likes being roasted by a laptop."
+      },
+      {
+        "kind": "idea",
+        "title": "Practice makes agents calmer when real leads push back.",
+        "subtitle": "AI Role-Play and Objection Handling",
+        "bullets": [
+          "I'm just looking.",
+          "I already have an agent.",
+          "I'm not ready yet."
+        ],
+        "notes": "Talk track: Keep the role-play friendly. Nobody likes being roasted by a laptop."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "AI Role-Play and Objection Handling",
+        "bullets": [
+          "I'm just looking.",
+          "I already have an agent.",
+          "I'm not ready yet.",
+          "I don't want to be contacted.",
+          "I'm waiting for rates to drop."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Ask AI to play the reluctant buyer and score the response.",
+        "bullets": [
+          "Pair up or do room-wide objection practice.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "8. Measurement and Improvement",
+        "subtitle": "15 minutes",
+        "bullets": [
+          "What gets measured gets coached."
+        ],
+        "notes": "End with practical accountability, not a dashboard lecture."
+      },
+      {
+        "kind": "idea",
+        "title": "What gets measured gets coached.",
+        "subtitle": "Measurement and Improvement",
+        "bullets": [
+          "Response rate.",
+          "Contact rate.",
+          "Appointment rate."
+        ],
+        "notes": "Talk track: End with practical accountability, not a dashboard lecture."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "Measurement and Improvement",
+        "bullets": [
+          "Response rate.",
+          "Contact rate.",
+          "Appointment rate.",
+          "Time-to-first-response.",
+          "Follow-up attempts."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Create a simple weekly lead conversion scorecard.",
+        "bullets": [
+          "Pick one metric to improve next week.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "takeaways",
+        "title": "What to Take Back to Your Business",
+        "subtitle": "Pick one workflow and make it repeatable.",
+        "bullets": [
+          "Respond quickly, but use the lead's context.",
+          "Ask one simple question.",
+          "Do not claim facts you have not verified.",
+          "Move toward a next step without forcing it.",
+          "Track response, contact, and appointment rates."
+        ],
+        "notes": "Use this slide to transition from learning into implementation."
+      },
+      {
+        "kind": "action",
+        "title": "Your 7-Day Action Plan",
+        "subtitle": "Small, specific, and actually doable.",
+        "bullets": [
+          "Pick one lead source.",
+          "Write a first-response prompt for that source.",
+          "Build text, email, voicemail, and call opener versions.",
+          "Track appointment conversion for one week."
+        ],
+        "notes": "Have attendees write down one action before leaving. This is the close."
+      }
+    ],
+    "prompts": [
+      "Create a first-response text for a [lead type]. Context: [lead activity]. Goal: start a conversation and move toward [appointment type].",
+      "Create a voicemail and matching text for this lead: [lead note]. Keep both brief and human.",
+      "Analyze these CRM notes and identify urgency, likely motivation, and best next message: [notes].",
+      "Role-play as a reluctant buyer lead. Push back realistically, then score my response."
+    ],
+    "checklist": [
+      "Respond quickly, but use the lead's context.",
+      "Ask one simple question.",
+      "Do not claim facts you have not verified.",
+      "Move toward a next step without forcing it.",
+      "Track response, contact, and appointment rates."
+    ],
+    "action_plan": [
+      "Pick one lead source.",
+      "Write a first-response prompt for that source.",
+      "Build text, email, voicemail, and call opener versions.",
+      "Track appointment conversion for one week."
+    ]
+  },
+  {
+    "number": 3,
+    "slug": "course-03-online-lead-response-and-nurture",
+    "title": "AI for Online Lead Response and Nurture Campaigns",
+    "promise": "Build follow-up systems that stay useful long after the first response.",
+    "audience": "Realtors who want better structure after online leads enter the database.",
+    "objectives": [
+      "Create first-response scripts for different lead types.",
+      "Segment leads before assigning nurture campaigns.",
+      "Build 7-day and 30-day nurture sequences.",
+      "Re-engage old leads without sounding awkward.",
+      "Personalize follow-up using behavior and context."
+    ],
+    "slides": [
+      {
+        "kind": "cover",
+        "title": "AI for Online Lead Response and Nurture Campaigns",
+        "subtitle": "Miami Realtors AI Course Series",
+        "bullets": [
+          "Build follow-up systems that stay useful long after the first response.",
+          "Audience: Realtors who want better structure after online leads enter the database."
+        ],
+        "notes": "Welcome the room, set the practical tone, and frame the class as useful even for agents who do not consider themselves technical."
+      },
+      {
+        "kind": "promise",
+        "title": "The Promise",
+        "subtitle": "Build follow-up systems that stay useful long after the first response.",
+        "bullets": [
+          "Practical examples, not theory.",
+          "Reusable prompts and workflows.",
+          "Professional judgment stays in the driver's seat."
+        ],
+        "notes": "Tell attendees they do not need to master every AI tool. The win is leaving with repeatable workflows."
+      },
+      {
+        "kind": "map",
+        "title": "Today at a Glance",
+        "subtitle": "Built for a 2-hour class; core modules total about 140 minutes plus exercises and discussion.",
+        "bullets": [
+          "After the Lead Comes In",
+          "First Response Framework",
+          "Segment Before You Nurture",
+          "Build a 7-Day New Lead Campaign",
+          "Build a 30-Day Buyer Nurture",
+          "Build a Seller Lead Nurture",
+          "Re-Engage Old Leads",
+          "Behavior-Based Follow-Up"
+        ],
+        "notes": "Preview the path so attendees know the class will stay concrete and paced."
+      },
+      {
+        "kind": "safety",
+        "title": "Professional Guardrails",
+        "subtitle": "AI helps draft and organize. You still verify, edit, and decide.",
+        "bullets": [
+          "Protect client privacy.",
+          "Verify facts before sending.",
+          "Avoid Fair Housing risk.",
+          "Do not outsource licensed judgment."
+        ],
+        "notes": "Set this expectation early so the rest of the class can be practical without sounding reckless."
+      },
+      {
+        "kind": "section",
+        "title": "1. After the Lead Comes In",
+        "subtitle": "15 minutes",
+        "bullets": [
+          "The gap between lead generation and conversion is usually the follow-up system."
+        ],
+        "notes": "Use the 'no one thanks you for checking in' line."
+      },
+      {
+        "kind": "idea",
+        "title": "The gap between lead generation and conversion is usually the follow-up system.",
+        "subtitle": "After the Lead Comes In",
+        "bullets": [
+          "First response is only the first move.",
+          "Just checking in is not a strategy.",
+          "Useful follow-up earns the next reply."
+        ],
+        "notes": "Talk track: Use the 'no one thanks you for checking in' line."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "After the Lead Comes In",
+        "bullets": [
+          "First response is only the first move.",
+          "Just checking in is not a strategy.",
+          "Useful follow-up earns the next reply.",
+          "Campaigns should point toward appointments."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Rewrite a weak check-in into a useful message.",
+        "bullets": [
+          "List reasons a lead would actually reply.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "2. First Response Framework",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "A strong first response acknowledges, helps, asks, and opens the path."
+        ],
+        "notes": "Keep scripts concise. Long first messages often reduce replies."
+      },
+      {
+        "kind": "idea",
+        "title": "A strong first response acknowledges, helps, asks, and opens the path.",
+        "subtitle": "First Response Framework",
+        "bullets": [
+          "Acknowledge the inquiry.",
+          "Provide useful context.",
+          "Ask one simple question."
+        ],
+        "notes": "Talk track: Keep scripts concise. Long first messages often reduce replies."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "First Response Framework",
+        "bullets": [
+          "Acknowledge the inquiry.",
+          "Provide useful context.",
+          "Ask one simple question.",
+          "Point toward call, showing, or consultation."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Create first responses for property, registration, valuation, and relocation leads.",
+        "bullets": [
+          "Choose the best question for each lead type.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "3. Segment Before You Nurture",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "The wrong campaign can make a good lead feel unseen."
+        ],
+        "notes": "This bridges manual agent work and future automation."
+      },
+      {
+        "kind": "idea",
+        "title": "The wrong campaign can make a good lead feel unseen.",
+        "subtitle": "Segment Before You Nurture",
+        "bullets": [
+          "Lead source.",
+          "Buyer vs seller.",
+          "Timeline."
+        ],
+        "notes": "Talk track: This bridges manual agent work and future automation."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "Segment Before You Nurture",
+        "bullets": [
+          "Lead source.",
+          "Buyer vs seller.",
+          "Timeline.",
+          "Location and price range.",
+          "Engagement level."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Sort a synthetic lead list into active, warm, long-term, cold, and reactivation.",
+        "bullets": [
+          "Ask what data their CRM already captures.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "4. Build a 7-Day New Lead Campaign",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "The first week should vary the reason to reply."
+        ],
+        "notes": "Emphasize channel mix: text, email, call, optional video."
+      },
+      {
+        "kind": "idea",
+        "title": "The first week should vary the reason to reply.",
+        "subtitle": "Build a 7-Day New Lead Campaign",
+        "bullets": [
+          "Day 0: answer and ask.",
+          "Day 1: helpful context.",
+          "Day 2: question-based follow-up."
+        ],
+        "notes": "Talk track: Emphasize channel mix: text, email, call, optional video."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "Build a 7-Day New Lead Campaign",
+        "bullets": [
+          "Day 0: answer and ask.",
+          "Day 1: helpful context.",
+          "Day 2: question-based follow-up.",
+          "Day 4: property or resource.",
+          "Day 7: appointment-oriented follow-up."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Build a 7-day sequence for a buyer who asked about one property.",
+        "bullets": [
+          "Make every touch feel different.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "5. Build a 30-Day Buyer Nurture",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "Longer nurture should educate, observe, and invite action."
+        ],
+        "notes": "Keep neighborhood claims compliant and factual."
+      },
+      {
+        "kind": "idea",
+        "title": "Longer nurture should educate, observe, and invite action.",
+        "subtitle": "Build a 30-Day Buyer Nurture",
+        "bullets": [
+          "Weekly value messages.",
+          "New listing alerts.",
+          "Market context."
+        ],
+        "notes": "Talk track: Keep neighborhood claims compliant and factual."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "Build a 30-Day Buyer Nurture",
+        "bullets": [
+          "Weekly value messages.",
+          "New listing alerts.",
+          "Market context.",
+          "Financing reminders.",
+          "Soft appointment asks."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Create a 30-day buyer campaign for a South Florida search lead.",
+        "bullets": [
+          "Add one behavior trigger to the campaign.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "6. Build a Seller Lead Nurture",
+        "subtitle": "20 minutes",
+        "bullets": [
+          "Seller nurture should build confidence before asking for the appointment."
+        ],
+        "notes": "Avoid pretending AI has appraised the home."
+      },
+      {
+        "kind": "idea",
+        "title": "Seller nurture should build confidence before asking for the appointment.",
+        "subtitle": "Build a Seller Lead Nurture",
+        "bullets": [
+          "Home valuation follow-up.",
+          "Seller education.",
+          "Comparable sales context."
+        ],
+        "notes": "Talk track: Avoid pretending AI has appraised the home."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "Build a Seller Lead Nurture",
+        "bullets": [
+          "Home valuation follow-up.",
+          "Seller education.",
+          "Comparable sales context.",
+          "Pre-listing prep.",
+          "Timing and pricing conversations."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Create a 30-day campaign for a homeowner who requested a valuation.",
+        "bullets": [
+          "Write a message that asks about timing without pressure.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "7. Re-Engage Old Leads",
+        "subtitle": "15 minutes",
+        "bullets": [
+          "Old leads need a fresh reason to reply, not guilt."
+        ],
+        "notes": "This is usually a favorite exercise because everyone has old leads."
+      },
+      {
+        "kind": "idea",
+        "title": "Old leads need a fresh reason to reply, not guilt.",
+        "subtitle": "Re-Engage Old Leads",
+        "bullets": [
+          "Market update hook.",
+          "Property-specific hook.",
+          "Seasonal hook."
+        ],
+        "notes": "Talk track: This is usually a favorite exercise because everyone has old leads."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "Re-Engage Old Leads",
+        "bullets": [
+          "Market update hook.",
+          "Property-specific hook.",
+          "Seasonal hook.",
+          "New resource hook.",
+          "Simple status question."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Write reactivation messages for three stale lead scenarios.",
+        "bullets": [
+          "Remove anything that sounds like blame.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "section",
+        "title": "8. Behavior-Based Follow-Up",
+        "subtitle": "10 minutes",
+        "bullets": [
+          "Behavior gives the campaign its next useful reason to exist."
+        ],
+        "notes": "Tie lightly to systems that capture online behavior."
+      },
+      {
+        "kind": "idea",
+        "title": "Behavior gives the campaign its next useful reason to exist.",
+        "subtitle": "Behavior-Based Follow-Up",
+        "bullets": [
+          "Viewed multiple homes.",
+          "Returned to website.",
+          "Saved a property."
+        ],
+        "notes": "Talk track: Tie lightly to systems that capture online behavior."
+      },
+      {
+        "kind": "framework",
+        "title": "Framework",
+        "subtitle": "Behavior-Based Follow-Up",
+        "bullets": [
+          "Viewed multiple homes.",
+          "Returned to website.",
+          "Saved a property.",
+          "Asked about payment or timing.",
+          "Viewed price reductions."
+        ],
+        "notes": "Walk through the framework quickly, then move to the demo. The framework should feel usable, not academic."
+      },
+      {
+        "kind": "exercise",
+        "title": "Live Practice",
+        "subtitle": "Create a follow-up for a lead who returned three times in a week.",
+        "bullets": [
+          "Choose one behavior trigger to implement first.",
+          "Debrief: what improved, what still needs human review?"
+        ],
+        "notes": "Facilitate the exercise. Invite one example from the room if time allows. Keep the output short and client-safe."
+      },
+      {
+        "kind": "takeaways",
+        "title": "What to Take Back to Your Business",
+        "subtitle": "Pick one workflow and make it repeatable.",
+        "bullets": [
+          "Do not send every lead the same campaign.",
+          "Make each touch useful and specific.",
+          "Vary channel, reason, and call to action.",
+          "Respect opt-outs and communication rules.",
+          "Measure replies and appointments, not just sends."
+        ],
+        "notes": "Use this slide to transition from learning into implementation."
+      },
+      {
+        "kind": "action",
+        "title": "Your 7-Day Action Plan",
+        "subtitle": "Small, specific, and actually doable.",
+        "bullets": [
+          "Choose one lead segment.",
+          "Build a 7-day campaign.",
+          "Add one 30-day extension.",
+          "Write three reactivation messages.",
+          "Review campaign performance after two weeks."
+        ],
+        "notes": "Have attendees write down one action before leaving. This is the close."
+      }
+    ],
+    "prompts": [
+      "Create a 7-day follow-up sequence for a [lead type]. Mix text, email, and call prompts. Avoid repeating the same message.",
+      "Segment these leads into active, warm, long-term, cold, and reactivation groups: [lead list].",
+      "Write a 30-day nurture campaign for a buyer interested in [area/property type] but not ready yet.",
+      "Rewrite this reactivation message so it sounds useful and not awkward: [message]."
+    ],
+    "checklist": [
+      "Do not send every lead the same campaign.",
+      "Make each touch useful and specific.",
+      "Vary channel, reason, and call to action.",
+      "Respect opt-outs and communication rules.",
+      "Measure replies and appointments, not just sends."
+    ],
+    "action_plan": [
+      "Choose one lead segment.",
+      "Build a 7-day campaign.",
+      "Add one 30-day extension.",
+      "Write three reactivation messages.",
+      "Review campaign performance after two weeks."
+    ]
+  }
+]
