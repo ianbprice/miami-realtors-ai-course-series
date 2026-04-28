@@ -75,6 +75,7 @@ See [LICENSE.md](LICENSE.md), [LICENSE-CONTENT.md](LICENSE-CONTENT.md), and [LIC
 - [Course 3 slide deck](slides/course-03-online-lead-response-and-nurture.pptx)
 - [Student handouts](pdfs/student/)
 - [Instructor guides](pdfs/instructor/)
+- [Board-facing syllabus PDFs](pdfs/syllabi/)
 - [Slide previews](slides/previews/)
 - [Slide generation source](slides/source/)
 - [Lead magnet prompts](prompts/lead-magnet-prompts.md)
