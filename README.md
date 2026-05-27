@@ -71,6 +71,7 @@ See [LICENSE.md](LICENSE.md), [LICENSE-CONTENT.md](LICENSE-CONTENT.md), and [LIC
 - [Course 4 syllabus](courses/04-advanced-ai-prompting.md)
 - [Course 5 syllabus](courses/05-ai-lead-magnets-for-realtors.md)
 - [Course 1 slide deck](slides/course-01-ai-for-real-estate-sales.pptx)
+- [Course 1 approved instructor-ready deck](slides/course-01-ai-for-real-estate-sales-approved-instructor-deck.pptx)
 - [Course 2 slide deck](slides/course-02-ai-lead-conversion.pptx)
 - [Course 3 slide deck](slides/course-03-online-lead-response-and-nurture.pptx)
 - [Student handouts](pdfs/student/)
