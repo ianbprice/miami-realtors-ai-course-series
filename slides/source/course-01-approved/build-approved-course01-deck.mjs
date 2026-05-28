@@ -11,7 +11,7 @@ const C = {
   navy: '16324F', ink: '102033', teal: '008F8F', sky: 'EAF7F7', blue: '2F80ED',
   coral: 'F45B69', gold: 'F2B84B', green: '2E7D5B', gray: '52606D',
   line: 'D8E6E8', paper: 'F7FAFC', white: 'FFFFFF', dark: '0D1B2A',
-  paleGold: 'FFF4D9', paleCoral: 'FFF0EF'
+  paleGold: 'FFF4D9', paleCoral: 'FFF0EF', lavender: 'F0F3FF', mint: 'E9F8F0'
 };
 
 const deck = new pptxgen();
@@ -84,6 +84,26 @@ function footer(slide, i) {
   slide.addText(`${i}/${slides.length}`, { x: 11.95, y: 7.18, w: 0.8, h: 0.18, fontFace: 'Aptos', fontSize: 7.2, color: C.gray, align: 'right', margin: 0 });
 }
 
+function addBackdrop(slide, variant = 0) {
+  const palette = [C.sky, C.paleGold, C.paleCoral, C.lavender, C.mint];
+  const color = palette[variant % palette.length];
+  slide.addShape(deck.ShapeType.arc, { x: 10.7, y: -0.55, w: 3.15, h: 3.15, adjustPoint: 0.16, line: { color, width: 2 }, fill: { color: C.white, transparency: 100 } });
+  slide.addShape(deck.ShapeType.arc, { x: -0.8, y: 5.85, w: 2.25, h: 2.25, adjustPoint: 0.22, line: { color, width: 2 }, fill: { color: C.white, transparency: 100 } });
+}
+
+function miniIcon(slide, x, y, label, color = C.teal) {
+  slide.addShape(deck.ShapeType.roundRect, { x, y, w: 0.54, h: 0.54, rectRadius: 0.08, fill: { color }, line: { color } });
+  slide.addText(label, { x: x + 0.05, y: y + 0.15, w: 0.44, h: 0.14, fontSize: 8.5, bold: true, color: C.white, align: 'center', margin: 0 });
+}
+
+function spotlightCard(slide, heading, body, variant = 0) {
+  const fills = [C.sky, C.paleGold, C.paleCoral, C.lavender, C.mint];
+  box(slide, 8.28, 2.0, 3.55, 3.05, fills[variant % fills.length], variant === 2 ? 'F5C8C5' : 'BFDADC');
+  slide.addText(heading, { x: 8.62, y: 2.35, w: 2.85, h: 0.58, fontSize: 17.5, bold: true, color: C.navy, margin: 0, fit: 'shrink' });
+  slide.addText(body, { x: 8.62, y: 3.22, w: 2.75, h: 1.05, fontSize: 12.2, color: C.ink, margin: 0.04, fit: 'shrink' });
+  slide.addShape(deck.ShapeType.line, { x: 8.62, y: 4.55, w: 1.2, h: 0, line: { color: variant === 2 ? C.coral : C.teal, width: 3 } });
+}
+
 function kicker(slide, text, color=C.teal) {
   slide.addShape(deck.ShapeType.rect, { x: 0.72, y: 0.48, w: 0.12, h: 0.28, fill: { color }, line: { color } });
   slide.addText(text, { x: 0.92, y: 0.47, w: 5.4, h: 0.25, fontFace: 'Aptos', fontSize: 8.8, bold: true, color, margin: 0, fit: 'shrink' });
@@ -115,13 +135,14 @@ function normalSlide(spec, i) {
   const speakerNote = spec[spec.length - 1];
   const slide = deck.addSlide();
   slide.background = { color: C.paper };
+  addBackdrop(slide, i);
   kicker(slide, k); title(slide, t, typeof a === 'string' && !Array.isArray(b) ? undefined : null);
 
   if (type === 'bullets') {
     bulletText(slide, a, 0.95, 2.05, 7.0, 4.0, t === 'Approved learning objectives' ? 14.4 : 16.5);
-    box(slide, 8.45, 2.02, 3.25, 2.85, t.startsWith('AI supports') ? C.paleCoral : C.sky);
-    slide.addText(t.startsWith('AI supports') ? 'Professional judgment stays in the loop.' : 'Practical course rule', { x: 8.75, y: 2.35, w: 2.65, h: 0.48, fontSize: 18, bold: true, color: C.navy, margin: 0, fit: 'shrink' });
-    slide.addText(t.startsWith('AI supports') ? 'Verify, review, and follow applicable rules before using AI output.' : 'Use AI where it reduces friction, then review before clients see it.', { x: 8.75, y: 3.1, w: 2.5, h: 1.0, fontSize: 12.6, color: C.ink, margin: 0.05, fit: 'shrink' });
+    const final = t.startsWith('AI supports');
+    spotlightCard(slide, final ? 'Professional judgment stays in the loop.' : 'Practical course rule', final ? 'Verify, review, and follow applicable rules before using AI output.' : 'Use AI where it reduces friction, then review before clients see it.', final ? 2 : i);
+    miniIcon(slide, 8.62, 4.78, final ? '!' : 'AI', final ? C.coral : C.teal);
   } else if (type === 'agenda') {
     a.forEach((s, idx) => {
       const x = 0.85 + (idx % 4) * 3.05, y = 2.0 + Math.floor(idx / 4) * 1.7;
@@ -136,14 +157,18 @@ function normalSlide(spec, i) {
       slide.addText(col[0][0], { x: x+0.32, y: 2.3, w: 4.3, h: 0.32, fontSize: 19, bold: true, color: C.navy, margin: 0 });
       bulletText(slide, col[0].slice(1), x+0.45, 2.9, 4.4, 2.3, 15);
     });
+    slide.addShape(deck.ShapeType.chevron, { x: 6.18, y: 3.3, w: 0.48, h: 0.52, fill: { color: C.teal }, line: { color: C.teal } });
   } else if (type === 'activity' || type === 'exercise') {
     const taskList = Array.isArray(c) ? c : (Array.isArray(b) ? b : []);
     const quoteText = Array.isArray(b) ? '' : b;
-    box(slide, 0.95, 2.0, 5.8, 2.85, C.white);
+    slide.addShape(deck.ShapeType.rect, { x: 0.9, y: 1.92, w: 5.92, h: 0.12, fill: { color: C.gold }, line: { color: C.gold } });
+    box(slide, 0.95, 2.05, 5.8, 2.8, C.white);
     slide.addText(a, { x: 1.25, y: 2.3, w: 5.1, h: 0.35, fontSize: 14, color: C.gray, margin: 0, fit: 'shrink' });
     if (quoteText) slide.addText(String(quoteText).replace(/^“|”$/g, ''), { x: 1.25, y: 2.82, w: 5.1, h: 1.25, fontSize: 17, bold: true, color: C.navy, margin: 0.03, fit: 'shrink' });
-    slide.addText('Work time: 4-6 minutes', { x: 1.25, y: 4.38, w: 2.4, h: 0.2, fontSize: 9.5, color: C.teal, bold: true, margin: 0 });
-    bulletText(slide, taskList, 7.2, 2.05, 4.6, 2.65, 15);
+    slide.addText('Workshop canvas', { x: 1.25, y: 4.38, w: 2.4, h: 0.2, fontSize: 9.5, color: C.teal, bold: true, margin: 0 });
+    box(slide, 7.05, 1.98, 4.75, 2.95, C.mint, 'BBDCC9');
+    bulletText(slide, taskList, 7.35, 2.35, 4.0, 2.0, 15);
+    slide.addText('4-6 min', { x: 10.65, y: 4.45, w: 0.8, h: 0.22, fontSize: 9.5, bold: true, color: C.green, margin: 0 });
   } else if (type === 'matrix') {
     a.forEach((item, idx) => {
       const x = 0.95 + (idx % 2) * 5.75, y = 2.0 + Math.floor(idx / 2) * 1.55;
@@ -167,22 +192,25 @@ function normalSlide(spec, i) {
       slide.addText(p[1], { x: x+0.24, y: y+0.48, w: 3.0, h: 0.28, fontSize: 11.5, color: C.ink, margin: 0, fit: 'shrink' });
     });
   } else if (type === 'example' || type === 'example2') {
-    box(slide, 0.95, 2.0, 4.2, 2.9, C.white);
-    slide.addText('Scenario', { x: 1.25, y: 2.28, w: 1.4, h: 0.2, fontSize: 10, bold: true, color: C.teal, margin: 0 });
-    slide.addText(a, { x: 1.25, y: 2.65, w: 3.55, h: 1.4, fontSize: 15.5, bold: true, color: C.navy, margin: 0.03, fit: 'shrink' });
-    box(slide, 5.65, 2.0, 5.95, 2.9, C.sky);
-    slide.addText('Example output', { x: 5.95, y: 2.28, w: 2.4, h: 0.2, fontSize: 10, bold: true, color: C.teal, margin: 0 });
-    slide.addText(b, { x: 5.95, y: 2.65, w: 5.25, h: 1.8, fontSize: 13.8, color: C.ink, margin: 0.03, fit: 'shrink', breakLine: false });
+    box(slide, 0.95, 2.0, 3.35, 3.25, C.white);
+    slide.addShape(deck.ShapeType.roundRect, { x: 1.25, y: 2.32, w: 2.75, h: 1.15, rectRadius: 0.12, fill: { color: C.lavender }, line: { color: 'D8DDF4' } });
+    slide.addText(a, { x: 1.45, y: 2.6, w: 2.35, h: 0.55, fontSize: 12.8, bold: true, color: C.navy, margin: 0.03, fit: 'shrink' });
+    slide.addText('Client context', { x: 1.25, y: 4.08, w: 1.5, h: 0.2, fontSize: 9.5, bold: true, color: C.teal, margin: 0 });
+    box(slide, 5.0, 2.0, 6.65, 3.25, C.sky);
+    slide.addShape(deck.ShapeType.roundRect, { x: 5.35, y: 2.42, w: 5.95, h: 1.75, rectRadius: 0.12, fill: { color: C.white }, line: { color: 'CFE5E8' } });
+    slide.addText(b, { x: 5.65, y: 2.72, w: 5.35, h: 1.15, fontSize: 13.2, color: C.ink, margin: 0.03, fit: 'shrink', breakLine: false });
+    slide.addText('Agent-reviewed response', { x: 5.35, y: 4.52, w: 2.25, h: 0.2, fontSize: 9.5, bold: true, color: C.teal, margin: 0 });
   } else if (type === 'prompts') {
     a.forEach((p, idx) => {
-      const y = 1.95 + idx * 0.72;
-      dot(slide, 0.95, y+0.05, String(idx+1), [C.teal,C.blue,C.coral,C.green,C.gold][idx%5]);
-      slide.addText(p, { x: 1.55, y, w: 9.9, h: 0.46, fontSize: 13.5, color: C.ink, margin: 0.02, fit: 'shrink' });
+      const y = 1.92 + idx * 0.68;
+      box(slide, 0.95, y, 10.55, 0.52, idx % 2 ? C.white : C.sky, idx % 2 ? C.line : 'B8DDE0');
+      dot(slide, 1.18, y+0.06, String(idx+1), [C.teal,C.blue,C.coral,C.green,C.gold][idx%5]);
+      slide.addText(p, { x: 1.78, y: y+0.08, w: 9.25, h: 0.24, fontSize: 12.6, color: C.ink, margin: 0.02, fit: 'shrink' });
     });
   } else if (type === 'workflow') {
     a.forEach((st, idx) => {
       const x = 0.8 + idx * (a.length > 5 ? 1.9 : 2.25);
-      dot(slide, x, 2.55, String(idx+1), [C.teal,C.blue,C.coral,C.green,C.gold,C.navy][idx%6]);
+      dot(slide, x, 2.55 + (idx % 2) * 0.18, String(idx+1), [C.teal,C.blue,C.coral,C.green,C.gold,C.navy][idx%6]);
       if (idx < a.length - 1) slide.addShape(deck.ShapeType.line, { x: x+0.45, y: 2.77, w: 1.22, h: 0, line: { color: C.line, width: 1.4, endArrowType: 'triangle' } });
       slide.addText(st, { x: x-0.15, y: 3.25, w: 1.55, h: 0.7, fontSize: 11.5, bold: true, color: C.ink, align: 'center', margin: 0, fit: 'shrink' });
     });
@@ -194,8 +222,9 @@ function normalSlide(spec, i) {
       slide.addText(it[1], { x: x+0.25, y: y+0.53, w: 3.0, h: 0.2, fontSize: 10.5, color: C.gray, margin: 0 });
     });
   } else if (type === 'quote') {
-    box(slide, 1.0, 2.0, 10.5, 2.55, C.sky);
-    slide.addText(`“${a}”`, { x: 1.45, y: 2.4, w: 9.5, h: 1.35, fontSize: 18, italic: true, color: C.navy, margin: 0.03, fit: 'shrink' });
+    box(slide, 1.0, 2.0, 10.5, 2.55, C.dark, C.dark);
+    slide.addShape(deck.ShapeType.arc, { x: 9.25, y: 1.75, w: 2.1, h: 2.1, adjustPoint: 0.18, line: { color: C.teal, width: 2 }, fill: { color: C.dark, transparency: 100 } });
+    slide.addText(`“${a}”`, { x: 1.45, y: 2.4, w: 9.0, h: 1.35, fontSize: 18, italic: true, color: C.white, margin: 0.03, fit: 'shrink' });
   } else if (type === 'timeline') {
     a.forEach((it, idx) => {
       const x = 0.95 + idx * 2.85;
@@ -251,7 +280,7 @@ function addSlide(spec, i) {
 
 slides.forEach((s, idx) => addSlide(s, idx + 1));
 
-const pptxPath = path.join(root, 'slides', 'course-01-ai-for-real-estate-sales-approved-instructor-deck.pptx');
+const pptxPath = process.env.PPTX_OUT || path.join(root, 'slides', 'course-01-ai-for-real-estate-sales-approved-instructor-deck.pptx');
 await deck.writeFile({ fileName: pptxPath });
 
 const srcDir = path.join(root, 'slides', 'source', 'course-01-approved');
