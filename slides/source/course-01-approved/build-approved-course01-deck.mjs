@@ -3,6 +3,10 @@ import path from 'path';
 import { createRequire } from 'module';
 
 const root = process.env.CLONE_ROOT || path.resolve('.');
+const brandAssets = {
+  miami: path.join(root, 'assets', 'brand', 'miami-realtors-logo-color.png'),
+  rworld: path.join(root, 'assets', 'brand', 'rworld-official-logo-color.png')
+};
 const nodeModules = 'C:/Users/TR4_1950X/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/.pnpm/pptxgenjs@4.0.1/node_modules/pptxgenjs';
 const require = createRequire(`${nodeModules}/package.json`);
 const pptxgen = require('pptxgenjs');
@@ -24,8 +28,8 @@ deck.title = 'AI for Real Estate Sales: From Confusion to Daily Use';
 deck.lang = 'en-US';
 deck.theme = { headFontFace: 'Aptos Display', bodyFontFace: 'Aptos', lang: 'en-US' };
 const slides = [
-  ['cover','APPROVED REALTOR EDUCATION COURSE','AI for Real Estate Sales','From Confusion to Daily Use','For MIAMI REALTORS® + RWorld members','Welcome attendees. Set expectations: practical, non-technical, compliance-aware.'],
-  ['bullets','INSTRUCTOR','Today is about workflows, not software demos',['Instructor: Ian Burton Price','Brief context: real estate technology, online lead workflows, and practical AI adoption','No official logos or brand marks are used','Examples are synthetic and classroom-safe'],'Keep the bio brief. Mention GoHouse.ai only as professional context, not as a pitch.'],
+  ['cover','APPROVED REALTOR EDUCATION COURSE','AI for Real Estate Sales','From Confusion to Daily Use','For MIAMI REALTORS + RWorld members','Welcome attendees. Set expectations: practical, non-technical, compliance-aware.'],
+  ['bullets','INSTRUCTOR','Today is about workflows, not software demos',['Instructor: Ian Burton Price','Real estate technology, online lead workflows, and practical AI adoption','Focus: usable sales communication, follow-up, listing prep, and daily productivity','Questions are welcome throughout the class'],'Keep the bio brief. Keep company context minimal and educational. Do not turn this into a product pitch.'],
   ['bullets','COURSE PROMISE','By the end, AI should feel usable in your normal sales day',['Draft clearer client messages','Follow up with more consistency','Prepare for buyer and seller conversations','Create listing and marketing drafts faster','Use AI with privacy, Fair Housing, and professional review in mind'],'Frame the course as a confidence-builder for busy professionals.'],
   ['bullets','APPROVED OBJECTIVES','Approved learning objectives',['Explain what AI can and cannot do in a real estate sales environment','Use AI to draft emails, text messages, listing copy, and client updates','Personalize buyer and seller communication with better context','Prepare for appointments, objections, and follow-up conversations','Build a simple daily AI workflow for productivity and consistency','Identify basic risks involving accuracy, privacy, Fair Housing, and overreliance'],'These objectives are preserved from the approved syllabus.'],
   ['agenda','SESSION MAP','The two-hour path',[['10m','Reality check'],['20m','Strengths + risks'],['25m','Client communication'],['20m','Lead follow-up'],['20m','Listings + marketing'],['20m','Appointment prep'],['20m','Workflow + guardrails'],['5m','Prompt practice']],'Use this to manage pacing. Exercises may expand or compress.'],
@@ -36,18 +40,18 @@ const slides = [
   ['section','SECTION 2','What AI Is Good At - And Where It Gets Risky','Use AI for drafting and structure. Verify facts before clients see them.'],
   ['compare','AI BASICS','A plain-English way to think about AI',['Good at','Drafting','Rewriting','Summarizing','Brainstorming','Organizing','Role-play'],['Not safe for','Guaranteeing facts','Legal advice','Local market certainty','MLS rule interpretation','Fair Housing judgment','Final decisions'],'Explain that AI predicts useful language; it does not verify your facts.'],
   ['matrix','REVIEW LENS','Four questions before using AI output with a client',[['Is it true?','Verify property facts, stats, dates, and claims.'],['Is it allowed?','Check brokerage, MLS, advertising, and communication rules.'],['Is it fair?','Avoid protected-class language, steering, or discriminatory targeting.'],['Is it yours?','Edit for your voice, judgment, and client relationship.']],'Use this review lens throughout the course.'],
-  ['exercise','ACTIVITY','Compliance risk check','Review this AI-generated sentence:','“This quiet family neighborhood is perfect for young professionals and has the best schools in the area.”',['What could create risk?','What facts need verification?','How could it be rewritten safely?'],'Discuss protected-class implications, school claims, and subjective neighborhood claims.'],
+  ['exercise','ACTIVITY','Compliance risk check','Review this AI-generated sentence:','"This quiet family neighborhood is perfect for young professionals and has the best schools in the area."',['What could create risk?','What facts need verification?','How could it be rewritten safely?'],'Discuss protected-class implications, school claims, and subjective neighborhood claims.'],
   ['beforeafter','BEFORE / AFTER','Better instruction creates safer output','Write a listing description for a nice house in Coral Gables.','Using only the verified facts below, draft a warm 130-word listing description. Avoid Fair Housing risk, school claims, or invented features. Facts: 3 bedrooms, 2 baths, updated kitchen, covered patio, 2-car garage, near parks and dining.','Show that the prompt provides facts, tone, constraints, and review boundaries.'],
   ['section','SECTION 3','AI for Client Communication','Better context creates messages that sound more like a professional agent.'],
-  ['formula','PROMPT FORMULA','Use the Realtor prompt formula',[['Role','You are helping me as a REALTOR®'],['Task','Draft a text / email / script / checklist'],['Context','Client situation, property, timeline, concern'],['Tone','Warm, concise, direct, educational'],['Constraints','Avoid claims, private data, Fair Housing risk'],['Goal','Reply, next step, clarity, appointment']],'Reference this formula repeatedly.'],
+  ['formula','PROMPT FORMULA','Use the Realtor prompt formula',[['Role','You are helping me as a REALTOR'],['Task','Draft a text / email / script / checklist'],['Context','Client situation, property, timeline, concern'],['Tone','Warm, concise, direct, educational'],['Constraints','Avoid claims, private data, Fair Housing risk'],['Goal','Reply, next step, clarity, appointment']],'Reference this formula repeatedly.'],
   ['example','BUYER EXAMPLE','Buyer follow-up: clear, short, useful','A buyer toured two condos, liked one, but is worried about monthly payment.','I know the monthly payment is the big question. I can send a quick side-by-side with estimated HOA, taxes, and payment ranges so you can compare without guessing. Would that be helpful before we decide whether to see similar options?','Point out empathy, value, and easy next question. Avoid lender-specific promises.'],
   ['example','SELLER EXAMPLE','Seller update: honest without sounding negative','A listing had showings but no offers this week.','We had three showings this week and the consistent feedback was positive on condition, with some hesitation around pricing compared with recent nearby options. My recommendation is that we review the newest activity together and decide whether a small adjustment would improve our position.','Emphasize no panic, no blame, no invented stats.'],
-  ['exercise','ACTIVITY','Improve this follow-up message','Original message:','“Just checking in to see if you are still interested.”',['Give the lead a reason to reply','Ask one specific question','Keep it under 45 words'],'The phrase “just checking in” is the teaching target.'],
-  ['prompts','PROMPTS','Reusable communication prompts',['Rewrite this text so it sounds warm, concise, and natural for a REALTOR®: [draft]','Create a buyer follow-up email based on these call notes: [notes]. Ask one clear next-step question.','Draft a seller update after a quiet week. Be honest, professional, and solution-oriented.','Give me three tone options: concise, reassuring, and more direct.'],'Encourage attendees to save prompts that work.'],
+  ['exercise','ACTIVITY','Improve this follow-up message','Original message:','"Just checking in to see if you are still interested."',['Give the lead a reason to reply','Ask one specific question','Keep it under 45 words'],'The phrase "just checking in" is the teaching target.'],
+  ['prompts','PROMPTS','Reusable communication prompts',['Rewrite this text so it sounds warm, concise, and natural for a REALTOR: [draft]','Create a buyer follow-up email based on these call notes: [notes]. Ask one clear next-step question.','Draft a seller update after a quiet week. Be honest, professional, and solution-oriented.','Give me three tone options: concise, reassuring, and more direct.'],'Encourage attendees to save prompts that work.'],
   ['section','SECTION 4','AI for Lead Follow-Up','The goal is not more messages. The goal is better next steps.'],
   ['bullets','LEAD REALITY','Most follow-up fails because it is generic, late, or stops too soon',['Online leads often arrive with limited context','Speed matters, but fast and generic still feels automated','Different lead sources need different first responses','Useful follow-up creates a reason to continue the conversation'],'Use examples: portal, IDX, open house, valuation lead, old database contact.'],
   ['workflow','WORKFLOW','Lead note to next-best message',['Capture source + behavior','Identify likely intent','Choose channel','Draft one useful message','Review for accuracy + tone','Send and log next step'],'Do not imply AI should auto-send without human review.'],
-  ['example2','SYNTHETIC LEAD','Property inquiry response that does more than answer “available?”','Lead asked: “Is the condo on Brickell still available?”','Weak: “Yes, it is available. Let me know if you want to see it.”\n\nBetter: “Yes, it appears available as of my latest check. Are you looking specifically in Brickell, or would similar buildings with strong amenities also be worth sending over?”','Emphasize that availability must be verified.'],
+  ['example2','SYNTHETIC LEAD','Property inquiry response that does more than answer "available?"','Lead asked: "Is the condo on Brickell still available?"','Weak: "Yes, it is available. Let me know if you want to see it."\n\nBetter: "Yes, it appears available as of my latest check. Are you looking specifically in Brickell, or would similar buildings with strong amenities also be worth sending over?"','Emphasize that availability must be verified.'],
   ['exercise','ACTIVITY','Build a first-response set','Synthetic lead: Online buyer asks about a 2-bedroom condo and leaves no timeline.','', ['Draft a text message','Draft a short email','Draft a voicemail opener','Add one appointment-oriented next step'],'Have attendees work in pairs or individually.'],
   ['matrix','MEASURE','Track whether AI is improving follow-up quality',[['Response rate','Are more leads replying?'],['Contact rate','Are conversations starting?'],['Appointment rate','Are replies becoming meetings?'],['Time to response','Are first touches faster?']],'Keep measurement simple.'],
   ['section','SECTION 5','AI for Listings, Sellers, and Marketing','Facts first. Polish second. Human review always.'],
@@ -80,7 +84,7 @@ function addNotes(slide, text) {
 
 function footer(slide, i) {
   slide.addShape(deck.ShapeType.line, { x: 0.55, y: 7.08, w: 12.25, h: 0, line: { color: C.line, width: 0.75 } });
-  slide.addText('Approved REALTOR® education course | MIAMI REALTORS® + RWorld members', { x: 0.55, y: 7.18, w: 7.8, h: 0.18, fontFace: 'Aptos', fontSize: 7.2, color: C.gray, margin: 0 });
+  slide.addText('Approved REALTOR education course | MIAMI REALTORS + RWorld members', { x: 0.55, y: 7.18, w: 7.8, h: 0.18, fontFace: 'Aptos', fontSize: 7.2, color: C.gray, margin: 0 });
   slide.addText(`${i}/${slides.length}`, { x: 11.95, y: 7.18, w: 0.8, h: 0.18, fontFace: 'Aptos', fontSize: 7.2, color: C.gray, align: 'right', margin: 0 });
 }
 
@@ -102,6 +106,38 @@ function spotlightCard(slide, heading, body, variant = 0) {
   slide.addText(heading, { x: 8.62, y: 2.35, w: 2.85, h: 0.58, fontSize: 17.5, bold: true, color: C.navy, margin: 0, fit: 'shrink' });
   slide.addText(body, { x: 8.62, y: 3.22, w: 2.75, h: 1.05, fontSize: 12.2, color: C.ink, margin: 0.04, fit: 'shrink' });
   slide.addShape(deck.ShapeType.line, { x: 8.62, y: 4.55, w: 1.2, h: 0, line: { color: variant === 2 ? C.coral : C.teal, width: 3 } });
+}
+
+function courseCue(title) {
+  const cues = [
+    ['Approved learning objectives', 'What this class builds', 'A practical AI workflow for real estate sales, not a technical certification.'],
+    ['By the end, AI should feel usable', 'Use it where work repeats', 'Start with messages, notes, follow-up, and prep before chasing new tools.'],
+    ['AI matters because', 'Speed plus judgment', 'AI can reduce blank-page time; the agent still owns accuracy and relationship quality.'],
+    ['Most follow-up fails', 'Useful beats frequent', 'Better follow-up gives the lead a reason to respond and a clear next step.'],
+    ['AI is useful when', 'Facts first', 'Feed AI verified property facts. Do not ask it to invent listing details.'],
+    ['AI helps you rehearse', 'Practice before pressure', 'Role-play makes client conversations clearer and less reactive.'],
+    ['Responsible AI use', 'Review before use', 'Private data, brokerage policy, MLS rules, advertising, and Fair Housing still apply.'],
+    ['Recommended resources', 'Keep sources close', 'Use authoritative local rules and broker guidance when the answer matters.'],
+    ['AI supports your work', 'Professional judgment stays in the loop', 'Verify, review, and follow applicable rules before using AI output.']
+  ];
+  const match = cues.find(([needle]) => title.startsWith(needle));
+  return match ? { heading: match[1], body: match[2] } : { heading: 'Make it usable', body: 'Turn each example into one repeatable workflow you can use this week.' };
+}
+
+function addOfficialLogoRail(slide, x, y, scale = 1) {
+  if (!fs.existsSync(brandAssets.miami) || !fs.existsSync(brandAssets.rworld)) return;
+  const miamiW = 1.58 * scale;
+  const miamiH = 0.69 * scale;
+  const rworldW = 3.0 * scale;
+  const rworldH = 0.61 * scale;
+  slide.addShape(deck.ShapeType.roundRect, {
+    x: x - 0.18, y: y - 0.14, w: miamiW + rworldW + 0.72, h: 0.98 * scale,
+    rectRadius: 0.04,
+    fill: { color: C.white, transparency: 3 },
+    line: { color: 'D7E4EA', transparency: 25, width: 0.6 }
+  });
+  slide.addImage({ path: brandAssets.miami, x, y, w: miamiW, h: miamiH });
+  slide.addImage({ path: brandAssets.rworld, x: x + miamiW + 0.42, y: y + 0.04 * scale, w: rworldW, h: rworldH });
 }
 
 function kicker(slide, text, color=C.teal) {
@@ -141,7 +177,8 @@ function normalSlide(spec, i) {
   if (type === 'bullets') {
     bulletText(slide, a, 0.95, 2.05, 7.0, 4.0, t === 'Approved learning objectives' ? 14.4 : 16.5);
     const final = t.startsWith('AI supports');
-    spotlightCard(slide, final ? 'Professional judgment stays in the loop.' : 'Practical course rule', final ? 'Verify, review, and follow applicable rules before using AI output.' : 'Use AI where it reduces friction, then review before clients see it.', final ? 2 : i);
+    const cue = courseCue(t);
+    spotlightCard(slide, cue.heading, cue.body, final ? 2 : i);
     miniIcon(slide, 8.62, 4.78, final ? '!' : 'AI', final ? C.coral : C.teal);
   } else if (type === 'agenda') {
     a.forEach((s, idx) => {
@@ -164,7 +201,7 @@ function normalSlide(spec, i) {
     slide.addShape(deck.ShapeType.rect, { x: 0.9, y: 1.92, w: 5.92, h: 0.12, fill: { color: C.gold }, line: { color: C.gold } });
     box(slide, 0.95, 2.05, 5.8, 2.8, C.white);
     slide.addText(a, { x: 1.25, y: 2.3, w: 5.1, h: 0.35, fontSize: 14, color: C.gray, margin: 0, fit: 'shrink' });
-    if (quoteText) slide.addText(String(quoteText).replace(/^“|”$/g, ''), { x: 1.25, y: 2.82, w: 5.1, h: 1.25, fontSize: 17, bold: true, color: C.navy, margin: 0.03, fit: 'shrink' });
+    if (quoteText) slide.addText(String(quoteText).replace(/^"|"$/g, ''), { x: 1.25, y: 2.82, w: 5.1, h: 1.25, fontSize: 17, bold: true, color: C.navy, margin: 0.03, fit: 'shrink' });
     slide.addText('Workshop canvas', { x: 1.25, y: 4.38, w: 2.4, h: 0.2, fontSize: 9.5, color: C.teal, bold: true, margin: 0 });
     box(slide, 7.05, 1.98, 4.75, 2.95, C.mint, 'BBDCC9');
     bulletText(slide, taskList, 7.35, 2.35, 4.0, 2.0, 15);
@@ -224,7 +261,7 @@ function normalSlide(spec, i) {
   } else if (type === 'quote') {
     box(slide, 1.0, 2.0, 10.5, 2.55, C.dark, C.dark);
     slide.addShape(deck.ShapeType.arc, { x: 9.25, y: 1.75, w: 2.1, h: 2.1, adjustPoint: 0.18, line: { color: C.teal, width: 2 }, fill: { color: C.dark, transparency: 100 } });
-    slide.addText(`“${a}”`, { x: 1.45, y: 2.4, w: 9.0, h: 1.35, fontSize: 18, italic: true, color: C.white, margin: 0.03, fit: 'shrink' });
+    slide.addText(`"${a}"`, { x: 1.45, y: 2.4, w: 9.0, h: 1.35, fontSize: 18, italic: true, color: C.white, margin: 0.03, fit: 'shrink' });
   } else if (type === 'timeline') {
     a.forEach((it, idx) => {
       const x = 0.95 + idx * 2.85;
@@ -237,8 +274,8 @@ function normalSlide(spec, i) {
     a.forEach((r, idx) => {
       const y = 1.95 + idx * 0.92;
       box(slide, 0.95, y, 10.5, 0.66, C.white);
-      slide.addText(r[0], { x: 1.22, y: y+0.18, w: 1.8, h: 0.18, fontSize: 10.5, bold: true, color: C.teal, margin: 0 });
-      slide.addText(r[1], { x: 3.05, y: y+0.14, w: 7.9, h: 0.24, fontSize: 11.5, color: C.ink, margin: 0, fit: 'shrink' });
+      slide.addText(r[0], { x: 1.22, y: y+0.18, w: 2.2, h: 0.18, fontSize: 10.3, bold: true, color: C.teal, margin: 0, fit: 'shrink' });
+      slide.addText(r[1], { x: 3.62, y: y+0.14, w: 7.25, h: 0.24, fontSize: 11.3, color: C.ink, margin: 0, fit: 'shrink' });
     });
   } else if (type === 'takeaways') {
     bulletText(slide, a, 1.0, 2.05, 9.8, 3.2, 17);
@@ -246,6 +283,7 @@ function normalSlide(spec, i) {
     slide.addText(a, { x: 0.76, y: 2.95, w: 7.5, h: 0.38, fontSize: 16, color: C.gray, margin: 0 });
     slide.addShape(deck.ShapeType.line, { x: 0.76, y: 3.58, w: 2.0, h: 0, line: { color: C.coral, width: 4 } });
     slide.addText('Thank you', { x: 0.76, y: 4.1, w: 3.0, h: 0.35, fontSize: 22, bold: true, color: C.navy, margin: 0 });
+    addOfficialLogoRail(slide, 7.05, 4.02, 0.72);
   }
   footer(slide, i);
   addNotes(slide, speakerNote);
@@ -262,6 +300,7 @@ function addSlide(spec, i) {
     slide.addText(t, { x: 0.78, y: 1.65, w: 9.8, h: 0.85, fontFace: 'Aptos Display', fontSize: 42, bold: true, color: C.white, margin: 0, fit: 'shrink' });
     slide.addText(a, { x: 0.82, y: 2.56, w: 8.7, h: 0.45, fontSize: 22, color: 'D7EDEE', margin: 0 });
     slide.addShape(deck.ShapeType.line, { x: 0.82, y: 3.34, w: 2.2, h: 0, line: { color: C.coral, width: 4 } });
+    addOfficialLogoRail(slide, 0.82, 4.72, 0.82);
     slide.addText(b, { x: 0.82, y: 5.95, w: 6.8, h: 0.28, fontSize: 12, color: 'D7EDEE', margin: 0 });
     slide.addText('Instructor-ready live training deck', { x: 0.82, y: 6.3, w: 4.8, h: 0.22, fontSize: 9.5, color: 'AFC8CF', margin: 0 });
     addNotes(slide, c);
@@ -286,18 +325,19 @@ await deck.writeFile({ fileName: pptxPath });
 const srcDir = path.join(root, 'slides', 'source', 'course-01-approved');
 fs.mkdirSync(srcDir, { recursive: true });
 fs.writeFileSync(path.join(srcDir, 'course-01-approved-slide-outline.md'),
-  `# Course 01 Approved Instructor Deck Outline\n\nSource: \`pdfs/syllabi/01-ai-for-real-estate-sales-syllabus.pdf\`\n\nOrganization reference used in deck: \`MIAMI REALTORS® + RWorld\`.\n\nSlide count: ${slides.length}\n\n` +
+  `# Course 01 Approved Instructor Deck Outline\n\nSource: \`pdfs/syllabi/01-ai-for-real-estate-sales-syllabus.pdf\`\n\nOrganization reference used in deck: \`MIAMI REALTORS + RWorld\`.\n\nSlide count: ${slides.length}\n\n` +
   slides.map((s, i) => `## ${String(i + 1).padStart(2, '0')}. ${s[2]}\n\n- Kicker: ${s[1]}\n- Layout type: ${s[0]}\n- Speaker note: ${s[s.length - 1] || 'Section transition or classroom discussion.'}`).join('\n\n') + '\n', 'utf8');
 fs.writeFileSync(path.join(srcDir, 'course-01-approved-assumptions.md'),
 `# Course 01 Approved Deck Assumptions
 
 - The approved source is \`pdfs/syllabi/01-ai-for-real-estate-sales-syllabus.pdf\`.
 - The course is a 2-hour live instructor-led class with optional hands-on prompt work.
-- Audience includes Florida REALTORS®, especially MIAMI REALTORS® + RWorld members, plus brokers, team leaders, and real estate professionals.
+- Audience includes Florida REALTORS, especially MIAMI REALTORS + RWorld members, plus brokers, team leaders, and real estate professionals.
 - The deck preserves the approved title and learning objectives while expanding the teaching content for live delivery.
 - The deck uses synthetic real estate examples only.
-- No official MIAMI REALTORS®, RWorld, MLS, brokerage, portal, or vendor logos are used.
-- GoHouse.ai appears only as brief instructor context in speaker notes, not as course branding or a product pitch.
+- Official MIAMI REALTORS and RWorld logo files are used conservatively on the title and closing slides only.
+- The deck does not recreate or invent a combined MIAMI REALTORS + RWorld lockup.
+- GoHouse.ai does not appear as course branding or a product pitch.
 - Compliance content is framed as general education and reminders, not legal advice.
 - AI tools should support professional judgment, not replace it.
 `, 'utf8');
@@ -307,32 +347,33 @@ fs.writeFileSync(path.join(srcDir, 'course-01-approved-assets.md'),
 Assets used in the PPTX:
 
 - Native editable PowerPoint shapes, lines, and text boxes.
-- No external images.
-- No official association logos or unverified brand marks.
+- Official MIAMI REALTORS color logo from the MIAMI downloadable logos page.
+- Official RWorld full-color logo from the RWorld brand guidelines page.
 
 Recommended optional future assets, if approved/provided:
 
-- Official MIAMI REALTORS® + RWorld approved education/program mark.
+- Official combined MIAMI REALTORS + RWorld approved education/program mark, if the board provides one.
 - Instructor headshot, if desired for the intro slide.
 - Association-approved event/course branding guidance.
 - Public-safe generic real estate classroom photo or local skyline image if rights are confirmed.
 
-Current deck intentionally avoids image dependencies so it remains open-source safe and easy to edit.
+Current deck avoids invented brand marks and uses only approved logo source files.
 `, 'utf8');
 fs.writeFileSync(path.join(srcDir, 'course-01-approved-organization-note.md'),
 `# Organization Naming Note
 
-The deck references \`MIAMI REALTORS® + RWorld\` and \`MIAMI REALTORS® + RWorld members\`.
+The deck references \`MIAMI REALTORS + RWorld\` and \`MIAMI REALTORS + RWorld members\`.
 
 Reasoning:
 
-- The user stated that MIAMI REALTORS® and RWorld completed a merger in May 2026.
+- The user stated that MIAMI REALTORS and RWorld completed a merger in May 2026.
 - The final long-term public brand name may still be in transition.
 - The deck therefore avoids overcommitting to an uncertain renamed entity.
 - The deck does not use \`Miami and South Florida Realtors\` as a primary name.
-- No official logos are used.
+- Official MIAMI REALTORS and RWorld source logos are used separately on title/closing slides.
+- The deck does not invent a new combined logo.
 
-This is intentionally conservative and suitable for an approved REALTOR® education course while branding remains in transition.
+This is intentionally conservative and suitable for an approved REALTOR education course while branding remains in transition.
 `, 'utf8');
 
 console.log(JSON.stringify({ pptxPath, slideCount: slides.length }, null, 2));

@@ -2,7 +2,7 @@
 
 Source: `pdfs/syllabi/01-ai-for-real-estate-sales-syllabus.pdf`
 
-Organization reference used in deck: `MIAMI REALTORS® + RWorld`.
+Organization reference used in deck: `MIAMI REALTORS + RWorld`.
 
 Slide count: 48
 
@@ -16,7 +16,7 @@ Slide count: 48
 
 - Kicker: INSTRUCTOR
 - Layout type: bullets
-- Speaker note: Keep the bio brief. Mention GoHouse.ai only as professional context, not as a pitch.
+- Speaker note: Keep the bio brief. Keep company context minimal and educational. Do not turn this into a product pitch.
 
 ## 03. By the end, AI should feel usable in your normal sales day
 
@@ -118,7 +118,7 @@ Slide count: 48
 
 - Kicker: ACTIVITY
 - Layout type: exercise
-- Speaker note: The phrase “just checking in” is the teaching target.
+- Speaker note: The phrase "just checking in" is the teaching target.
 
 ## 20. Reusable communication prompts
 
@@ -144,7 +144,7 @@ Slide count: 48
 - Layout type: workflow
 - Speaker note: Do not imply AI should auto-send without human review.
 
-## 24. Property inquiry response that does more than answer “available?”
+## 24. Property inquiry response that does more than answer "available?"
 
 - Kicker: SYNTHETIC LEAD
 - Layout type: example2
