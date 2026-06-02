@@ -76,6 +76,7 @@ const slides = [
   ['workflow','NEXT STEPS','Your one-week implementation plan',['Choose one workflow','Write one reusable prompt','Use it three times','Save the best output','Refine after reviewing results'],'Ask each attendee to choose one workflow.'],
   ['bullets','RESOURCES','Recommended resources to keep nearby',['Your brokerage AI, advertising, and data policies','Fair Housing and advertising guidance from your brokerage or association','MLS rules and public remarks guidance','A personal prompt library saved in your notes or CRM workflow','A simple checklist: private, verified, compliant, human-reviewed'],'Point attendees to authoritative sources and broker guidance.'],
   ['bullets','FINAL REMINDER','AI supports your work. It does not replace your judgment.',['This course provides general education, not legal, financial, brokerage, MLS, or Fair Housing advice','Agents remain responsible for reviewing communications and following applicable rules','Use verified facts and approved data sources','When uncertain, consult your broker, MLS, attorney, lender, or appropriate professional'],'Close cleanly. Invite final questions.'],
+  ['bio','ABOUT THE INSTRUCTOR','About the Instructor','Ian Burton Price','Real estate technology educator and founder of GoHouse.ai',['Practical AI workflows for real estate sales, online lead response, and daily agent productivity','Focus on helping agents use AI responsibly while keeping their own voice and professional judgment','Experience building at the intersection of real estate websites, CRMs, lead conversion, and automation'],['GoHouse.ai is an AI-assisted real estate lead engagement and follow-up platform','Built around faster response, clearer nurture workflows, and better conversion from online interest to real conversations','Mentioned here as instructor context; no GoHouse.ai product is required for this course'],'Use this slide briefly. Keep it personal and contextual: why you teach this topic, why online lead response matters, and why the class remains vendor-neutral.'],
   ['closing','THANK YOU','Questions and discussion','AI for Real Estate Sales: From Confusion to Daily Use','Use remaining time for questions, examples, and follow-up requests.']
 ];
 
@@ -306,6 +307,23 @@ function normalSlide(spec, i) {
     });
   } else if (type === 'takeaways') {
     bulletText(slide, a, 1.0, 2.05, 9.8, 3.2, 17);
+  } else if (type === 'bio') {
+    const personName = spec[3];
+    const personTitle = spec[4];
+    const bioBullets = spec[5];
+    const goHouseBullets = spec[6];
+    box(slide, 0.95, 2.0, 5.25, 3.85, C.white);
+    slide.addText('Instructor', { x: 1.28, y: 2.28, w: 1.4, h: 0.18, fontSize: 9.5, bold: true, color: C.teal, margin: 0 });
+    slide.addText(personName, { x: 1.28, y: 2.62, w: 4.55, h: 0.38, fontSize: 22, bold: true, color: C.navy, margin: 0, fit: 'shrink' });
+    slide.addText(personTitle, { x: 1.28, y: 3.08, w: 4.55, h: 0.3, fontSize: 12.8, color: C.gray, margin: 0, fit: 'shrink' });
+    slide.addShape(deck.ShapeType.line, { x: 1.28, y: 3.6, w: 1.35, h: 0, line: { color: C.coral, width: 3 } });
+    bulletText(slide, bioBullets, 1.28, 3.92, 4.45, 1.1, 11.7);
+    slide.addShape(deck.ShapeType.rect, { x: 6.75, y: 1.9, w: 0.14, h: 4.0, fill: { color: C.teal }, line: { color: C.teal } });
+    box(slide, 6.9, 2.0, 4.85, 3.85, C.sky, 'BFDADC');
+    slide.addText('GoHouse.ai', { x: 7.25, y: 2.33, w: 3.0, h: 0.38, fontSize: 22, bold: true, color: C.navy, margin: 0 });
+    slide.addText('Where this work shows up in the real world', { x: 7.25, y: 2.85, w: 3.9, h: 0.22, fontSize: 10.5, bold: true, color: C.teal, margin: 0 });
+    bulletText(slide, goHouseBullets, 7.25, 3.38, 4.0, 1.45, 11.7);
+    slide.addText('Context, not a product requirement', { x: 7.25, y: 5.25, w: 2.9, h: 0.18, fontSize: 9.5, bold: true, color: C.green, margin: 0 });
   } else if (type === 'closing') {
     slide.addText(a, { x: 0.76, y: 2.95, w: 7.5, h: 0.38, fontSize: 16, color: C.gray, margin: 0 });
     slide.addShape(deck.ShapeType.line, { x: 0.76, y: 3.58, w: 2.0, h: 0, line: { color: C.coral, width: 4 } });
