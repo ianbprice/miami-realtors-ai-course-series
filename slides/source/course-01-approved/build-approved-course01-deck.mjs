@@ -383,7 +383,7 @@ fs.writeFileSync(path.join(srcDir, 'course-01-approved-assets.md'),
 Assets used in the PPTX:
 
 - Native editable PowerPoint shapes, lines, and text boxes.
-- Combined MIAMI REALTORS + RWorld logo crop from the official merger-page social-share image.
+- Clean combined MIAMI REALTORS + RWorld logo asset with transparent background.
 - Legacy separate logo files remain in assets/brand for reference but are not used in this deck.
 
 Recommended optional future assets, if approved/provided:
