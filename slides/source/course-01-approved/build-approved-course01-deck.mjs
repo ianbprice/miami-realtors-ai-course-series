@@ -5,7 +5,8 @@ import { createRequire } from 'module';
 const root = process.env.CLONE_ROOT || path.resolve('.');
 const brandAssets = {
   miami: path.join(root, 'assets', 'brand', 'miami-realtors-logo-color.png'),
-  rworld: path.join(root, 'assets', 'brand', 'rworld-official-logo-color.png')
+  rworld: path.join(root, 'assets', 'brand', 'rworld-official-logo-color.png'),
+  combined: path.join(root, 'assets', 'brand', 'miami-realtors-rworld-combined-logo.png')
 };
 const nodeModules = 'C:/Users/TR4_1950X/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/.pnpm/pptxgenjs@4.0.1/node_modules/pptxgenjs';
 const require = createRequire(`${nodeModules}/package.json`);
@@ -149,19 +150,16 @@ function courseCue(title) {
 }
 
 function addOfficialLogoRail(slide, x, y, scale = 1) {
-  if (!fs.existsSync(brandAssets.miami) || !fs.existsSync(brandAssets.rworld)) return;
-  const miamiW = 1.58 * scale;
-  const miamiH = 0.69 * scale;
-  const rworldW = 3.0 * scale;
-  const rworldH = 0.61 * scale;
+  if (!fs.existsSync(brandAssets.combined)) return;
+  const logoW = 5.32 * scale;
+  const logoH = 0.8 * scale;
   slide.addShape(deck.ShapeType.roundRect, {
-    x: x - 0.18, y: y - 0.14, w: miamiW + rworldW + 0.72, h: 0.98 * scale,
+    x: x - 0.16, y: y - 0.12, w: logoW + 0.32, h: logoH + 0.24,
     rectRadius: 0.04,
     fill: { color: C.white, transparency: 3 },
     line: { color: 'D7E4EA', transparency: 25, width: 0.6 }
   });
-  slide.addImage({ path: brandAssets.miami, x, y, w: miamiW, h: miamiH });
-  slide.addImage({ path: brandAssets.rworld, x: x + miamiW + 0.42, y: y + 0.04 * scale, w: rworldW, h: rworldH });
+  slide.addImage({ path: brandAssets.combined, x, y, w: logoW, h: logoH });
 }
 
 function kicker(slide, text, color=C.teal) {
@@ -385,12 +383,12 @@ fs.writeFileSync(path.join(srcDir, 'course-01-approved-assets.md'),
 Assets used in the PPTX:
 
 - Native editable PowerPoint shapes, lines, and text boxes.
-- Official MIAMI REALTORS color logo from the MIAMI downloadable logos page.
-- Official RWorld full-color logo from the RWorld brand guidelines page.
+- Combined MIAMI REALTORS + RWorld logo crop from the official merger-page social-share image.
+- Legacy separate logo files remain in assets/brand for reference but are not used in this deck.
 
 Recommended optional future assets, if approved/provided:
 
-- Official combined MIAMI REALTORS + RWorld approved education/program mark, if the board provides one.
+- Cleaner transparent combined MIAMI REALTORS + RWorld logo file, if the board provides one.
 - Instructor headshot, if desired for the intro slide.
 - Association-approved event/course branding guidance.
 - Public-safe generic real estate classroom photo or local skyline image if rights are confirmed.
