@@ -95,6 +95,29 @@ function addBackdrop(slide, variant = 0) {
   slide.addShape(deck.ShapeType.arc, { x: -0.8, y: 5.85, w: 2.25, h: 2.25, adjustPoint: 0.22, line: { color, width: 2 }, fill: { color: C.white, transparency: 100 } });
 }
 
+function accentFor(i) {
+  return [C.teal, C.blue, C.coral, C.gold, C.green][i % 5];
+}
+
+function addSignalBars(slide, i) {
+  const colors = [C.teal, C.blue, C.coral, C.gold];
+  colors.forEach((color, idx) => {
+    slide.addShape(deck.ShapeType.rect, {
+      x: 10.15 + idx * 0.38,
+      y: 0.54,
+      w: 0.24,
+      h: 0.08 + ((idx + i) % 3) * 0.045,
+      fill: { color, transparency: 8 },
+      line: { color, transparency: 100 }
+    });
+  });
+}
+
+function addWorkshopPill(slide, text, x, y, color = C.teal) {
+  slide.addShape(deck.ShapeType.roundRect, { x, y, w: 1.72, h: 0.34, rectRadius: 0.04, fill: { color }, line: { color } });
+  slide.addText(text, { x: x + 0.14, y: y + 0.095, w: 1.42, h: 0.1, fontSize: 7.2, bold: true, color: C.white, align: 'center', margin: 0, fit: 'shrink' });
+}
+
 function miniIcon(slide, x, y, label, color = C.teal) {
   slide.addShape(deck.ShapeType.roundRect, { x, y, w: 0.54, h: 0.54, rectRadius: 0.08, fill: { color }, line: { color } });
   slide.addText(label, { x: x + 0.05, y: y + 0.15, w: 0.44, h: 0.14, fontSize: 8.5, bold: true, color: C.white, align: 'center', margin: 0 });
@@ -102,7 +125,8 @@ function miniIcon(slide, x, y, label, color = C.teal) {
 
 function spotlightCard(slide, heading, body, variant = 0) {
   const fills = [C.sky, C.paleGold, C.paleCoral, C.lavender, C.mint];
-  box(slide, 8.28, 2.0, 3.55, 3.05, fills[variant % fills.length], variant === 2 ? 'F5C8C5' : 'BFDADC');
+  slide.addShape(deck.ShapeType.rect, { x: 8.18, y: 1.9, w: 0.1, h: 3.25, fill: { color: accentFor(variant) }, line: { color: accentFor(variant) } });
+  box(slide, 8.32, 2.0, 3.55, 3.05, fills[variant % fills.length], variant === 2 ? 'F5C8C5' : 'BFDADC');
   slide.addText(heading, { x: 8.62, y: 2.35, w: 2.85, h: 0.58, fontSize: 17.5, bold: true, color: C.navy, margin: 0, fit: 'shrink' });
   slide.addText(body, { x: 8.62, y: 3.22, w: 2.75, h: 1.05, fontSize: 12.2, color: C.ink, margin: 0.04, fit: 'shrink' });
   slide.addShape(deck.ShapeType.line, { x: 8.62, y: 4.55, w: 1.2, h: 0, line: { color: variant === 2 ? C.coral : C.teal, width: 3 } });
@@ -172,6 +196,7 @@ function normalSlide(spec, i) {
   const slide = deck.addSlide();
   slide.background = { color: C.paper };
   addBackdrop(slide, i);
+  addSignalBars(slide, i);
   kicker(slide, k); title(slide, t, typeof a === 'string' && !Array.isArray(b) ? undefined : null);
 
   if (type === 'bullets') {
@@ -181,8 +206,10 @@ function normalSlide(spec, i) {
     spotlightCard(slide, cue.heading, cue.body, final ? 2 : i);
     miniIcon(slide, 8.62, 4.78, final ? '!' : 'AI', final ? C.coral : C.teal);
   } else if (type === 'agenda') {
+    slide.addText('Concept -> example -> practice -> takeaway', { x: 0.86, y: 1.58, w: 4.7, h: 0.22, fontSize: 10.5, bold: true, color: C.gray, margin: 0 });
     a.forEach((s, idx) => {
       const x = 0.85 + (idx % 4) * 3.05, y = 2.0 + Math.floor(idx / 4) * 1.7;
+      slide.addShape(deck.ShapeType.line, { x, y: y + 0.76, w: 2.35, h: 0, line: { color: idx < 4 ? C.line : 'E7D9B6', width: 1 } });
       dot(slide, x, y, String(idx+1), [C.teal,C.blue,C.coral,C.gold][idx%4]);
       slide.addText(s[0], { x: x+0.58, y: y+0.02, w: 0.75, h: 0.18, fontSize: 9, bold: true, color: C.gray, margin: 0 });
       slide.addText(s[1], { x: x+0.58, y: y+0.34, w: 2.1, h: 0.35, fontSize: 15, bold: true, color: C.ink, margin: 0, fit: 'shrink' });
@@ -198,13 +225,15 @@ function normalSlide(spec, i) {
   } else if (type === 'activity' || type === 'exercise') {
     const taskList = Array.isArray(c) ? c : (Array.isArray(b) ? b : []);
     const quoteText = Array.isArray(b) ? '' : b;
-    slide.addShape(deck.ShapeType.rect, { x: 0.9, y: 1.92, w: 5.92, h: 0.12, fill: { color: C.gold }, line: { color: C.gold } });
+    addWorkshopPill(slide, type === 'activity' ? 'DISCUSS' : 'PRACTICE', 0.95, 1.66, type === 'activity' ? C.blue : C.gold);
+    slide.addShape(deck.ShapeType.rect, { x: 0.9, y: 1.98, w: 5.92, h: 0.12, fill: { color: type === 'activity' ? C.blue : C.gold }, line: { color: type === 'activity' ? C.blue : C.gold } });
     box(slide, 0.95, 2.05, 5.8, 2.8, C.white);
     slide.addText(a, { x: 1.25, y: 2.3, w: 5.1, h: 0.35, fontSize: 14, color: C.gray, margin: 0, fit: 'shrink' });
     if (quoteText) slide.addText(String(quoteText).replace(/^"|"$/g, ''), { x: 1.25, y: 2.82, w: 5.1, h: 1.25, fontSize: 17, bold: true, color: C.navy, margin: 0.03, fit: 'shrink' });
     slide.addText('Workshop canvas', { x: 1.25, y: 4.38, w: 2.4, h: 0.2, fontSize: 9.5, color: C.teal, bold: true, margin: 0 });
-    box(slide, 7.05, 1.98, 4.75, 2.95, C.mint, 'BBDCC9');
-    bulletText(slide, taskList, 7.35, 2.35, 4.0, 2.0, 15);
+    slide.addShape(deck.ShapeType.rect, { x: 7.05, y: 1.98, w: 0.14, h: 2.95, fill: { color: C.green }, line: { color: C.green } });
+    box(slide, 7.2, 1.98, 4.6, 2.95, C.mint, 'BBDCC9');
+    bulletText(slide, taskList, 7.5, 2.35, 3.85, 2.0, 15);
     slide.addText('4-6 min', { x: 10.65, y: 4.45, w: 0.8, h: 0.22, fontSize: 9.5, bold: true, color: C.green, margin: 0 });
   } else if (type === 'matrix') {
     a.forEach((item, idx) => {
@@ -296,10 +325,14 @@ function addSlide(spec, i) {
     slide.background = { color: C.navy };
     slide.addShape(deck.ShapeType.rect, { x: 0, y: 0, w: 13.333, h: 7.5, fill: { color: C.navy }, line: { color: C.navy } });
     slide.addShape(deck.ShapeType.arc, { x: 8.7, y: -0.55, w: 4.8, h: 4.8, adjustPoint: 0.18, line: { color: '5FBDBD', transparency: 20, width: 2 }, fill: { color: C.navy, transparency: 100 } });
+    slide.addShape(deck.ShapeType.rect, { x: 11.84, y: 0, w: 0.22, h: 7.5, fill: { color: C.teal, transparency: 25 }, line: { color: C.teal, transparency: 100 } });
+    slide.addShape(deck.ShapeType.rect, { x: 12.12, y: 0, w: 0.1, h: 7.5, fill: { color: C.gold, transparency: 12 }, line: { color: C.gold, transparency: 100 } });
+    slide.addText('AI', { x: 8.0, y: 3.05, w: 4.3, h: 1.2, fontFace: 'Aptos Display', fontSize: 108, bold: true, color: '254B6B', margin: 0, fit: 'shrink' });
     slide.addText(k, { x: 0.8, y: 0.75, w: 6.8, h: 0.25, fontSize: 10.5, bold: true, color: C.gold, margin: 0 });
     slide.addText(t, { x: 0.78, y: 1.65, w: 9.8, h: 0.85, fontFace: 'Aptos Display', fontSize: 42, bold: true, color: C.white, margin: 0, fit: 'shrink' });
     slide.addText(a, { x: 0.82, y: 2.56, w: 8.7, h: 0.45, fontSize: 22, color: 'D7EDEE', margin: 0 });
     slide.addShape(deck.ShapeType.line, { x: 0.82, y: 3.34, w: 2.2, h: 0, line: { color: C.coral, width: 4 } });
+    addWorkshopPill(slide, 'LIVE WORKSHOP', 0.82, 3.68, C.teal);
     addOfficialLogoRail(slide, 0.82, 4.72, 0.82);
     slide.addText(b, { x: 0.82, y: 5.95, w: 6.8, h: 0.28, fontSize: 12, color: 'D7EDEE', margin: 0 });
     slide.addText('Instructor-ready live training deck', { x: 0.82, y: 6.3, w: 4.8, h: 0.22, fontSize: 9.5, color: 'AFC8CF', margin: 0 });
@@ -307,10 +340,15 @@ function addSlide(spec, i) {
   } else if (type === 'section') {
     const slide = deck.addSlide();
     slide.background = { color: C.dark };
+    const sectionNum = slides.slice(0, i).filter(s => s[0] === 'section').length;
+    slide.addShape(deck.ShapeType.rect, { x: 0, y: 0, w: 0.32, h: 7.5, fill: { color: accentFor(sectionNum) }, line: { color: accentFor(sectionNum) } });
+    slide.addShape(deck.ShapeType.rect, { x: 10.85, y: 0, w: 2.48, h: 7.5, fill: { color: '102B43', transparency: 10 }, line: { color: '102B43', transparency: 100 } });
+    slide.addText(String(sectionNum).padStart(2, '0'), { x: 8.3, y: 1.15, w: 3.8, h: 1.1, fontFace: 'Aptos Display', fontSize: 78, bold: true, color: '28465D', margin: 0, align: 'right' });
     slide.addText(k, { x: 0.82, y: 0.9, w: 4.2, h: 0.28, fontSize: 11, bold: true, color: C.gold, margin: 0 });
-    slide.addText(t, { x: 0.78, y: 2.0, w: 10.9, h: 0.85, fontFace: 'Aptos Display', fontSize: 34, bold: true, color: C.white, margin: 0, fit: 'shrink' });
-    slide.addText(a, { x: 0.82, y: 3.12, w: 8.9, h: 0.45, fontSize: 16, color: 'DCEEEF', margin: 0, fit: 'shrink' });
+    slide.addText(t, { x: 0.78, y: 2.0, w: 9.4, h: 0.9, fontFace: 'Aptos Display', fontSize: 34, bold: true, color: C.white, margin: 0, fit: 'shrink' });
+    slide.addText(a, { x: 0.82, y: 3.12, w: 8.4, h: 0.45, fontSize: 16, color: 'DCEEEF', margin: 0, fit: 'shrink' });
     slide.addShape(deck.ShapeType.line, { x: 0.82, y: 4.0, w: 2.0, h: 0, line: { color: C.coral, width: 4 } });
+    slide.addText('Next: concept -> example -> practice', { x: 0.82, y: 4.42, w: 3.8, h: 0.25, fontSize: 10.5, bold: true, color: '9DB8C8', margin: 0 });
     addNotes(slide, 'Transition into the next approved syllabus section. State the practical outcome before beginning the content.');
   } else {
     normalSlide(spec, i);
