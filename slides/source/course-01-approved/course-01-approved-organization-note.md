@@ -8,7 +8,7 @@ Reasoning:
 - The final long-term public brand name may still be in transition.
 - The deck therefore avoids overcommitting to an uncertain renamed entity.
 - The deck does not use `Miami and South Florida Realtors` as a primary name.
-- Official MIAMI REALTORS and RWorld source logos are used separately on title/closing slides.
-- The deck does not invent a new combined logo.
+- The user-provided combined MIAMI REALTORS + RWorld logo is used on the title slide.
+- The deck does not invent alternate board branding.
 
 This is intentionally conservative and suitable for an approved REALTOR education course while branding remains in transition.
