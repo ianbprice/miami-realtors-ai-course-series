@@ -4,6 +4,7 @@ Assets used in the PPTX:
 
 - Native editable PowerPoint shapes, lines, and text boxes.
 - User-provided combined MIAMI REALTORS + RWorld logo asset.
+- User-provided GoHouse.ai logo asset, used only as presenter/professional context on the title, instructor, and final contact/action slides.
 - Legacy separate logo files remain in assets/brand for reference but are not used in this deck.
 
 Recommended optional future assets, if approved/provided:

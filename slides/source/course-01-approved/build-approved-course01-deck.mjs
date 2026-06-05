@@ -6,7 +6,8 @@ const root = process.env.CLONE_ROOT || path.resolve('.');
 const brandAssets = {
   miami: path.join(root, 'assets', 'brand', 'miami-realtors-logo-color.png'),
   rworld: path.join(root, 'assets', 'brand', 'rworld-official-logo-color.png'),
-  combined: path.join(root, 'assets', 'brand', 'miami-realtors-rworld-combined-logo.png')
+  combined: path.join(root, 'assets', 'brand', 'miami-realtors-rworld-combined-logo.png'),
+  gohouse: path.join(root, 'assets', 'brand', 'gohouse-logo-w-text-large-transparent.png')
 };
 const nodeModules = 'C:/Users/TR4_1950X/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/.pnpm/pptxgenjs@4.0.1/node_modules/pptxgenjs';
 const require = createRequire(`${nodeModules}/package.json`);
@@ -74,7 +75,7 @@ const slides = [
   ['exercise','ACTIVITY','Build your daily AI workflow','Pick one task in each part of the day.','', ['Morning task','Midday follow-up task','Afternoon marketing/client update task','End-of-day CRM or notes task'],'Ask attendees to write one workflow they will actually use.'],
   ['prompts','STARTER LIBRARY','Five prompts to save before you leave',['Draft a client message from these notes: [notes]. Make it concise, warm, and specific.','Create three versions of this follow-up: text, email, and voicemail.','Review this message for accuracy, Fair Housing risk, and claims I should verify.','Turn these verified listing facts into a listing paragraph, social caption, and open house invite.','Role-play as [buyer/seller type] and help me practice responding professionally.'],'Use one chat per client, property, or workflow when context matters. Use separate chats when topics, clients, or confidential contexts should not mix. Encourage attendees to customize the bracketed fields.'],
   ['workflow','SAVE CONTEXT','Make the workflow repeatable',['Save the best prompt','Save the verified fact block','Save the final reviewed version','Note what worked','Reuse as a template next time'],'To make AI output repeatable, save the prompt, the verified fact block, the tone instruction, the final reviewed version, and the reason it worked.'],
-  ['workflow','FINAL ACTION','Your one-week implementation plan',['Choose one workflow','Write one reusable prompt','Use it three times','Save what worked','Review before using with clients'], 'This course provides general education, not legal, financial, brokerage, MLS, or Fair Housing advice. Point attendees to brokerage AI policies, Fair Housing and advertising guidance, MLS rules, and appropriate professionals when needed. Close on action, not a generic thank-you slide.']
+  ['workflow','FINAL ACTION','Your one-week implementation plan + contact',['Choose one workflow','Write one reusable prompt','Use it three times','Save what worked','Review before using with clients'], 'This course provides general education, not legal, financial, brokerage, MLS, or Fair Housing advice. Point attendees to brokerage AI policies, Fair Housing and advertising guidance, MLS rules, and appropriate professionals when needed. Close on action and presenter contact, not a generic thank-you slide.']
 ];
 
 function addNotes(slide, text) {
@@ -245,6 +246,11 @@ function addOfficialLogoRail(slide, x, y, scale = 1) {
   slide.addImage({ path: brandAssets.combined, x, y, w: logoW, h: logoH });
 }
 
+function addGoHouseLogo(slide, x, y, w = 1.45) {
+  if (!fs.existsSync(brandAssets.gohouse)) return;
+  slide.addImage({ path: brandAssets.gohouse, x, y, w, h: w * 0.2 });
+}
+
 function kicker(slide, text, color=C.teal) {
   slide.addShape(deck.ShapeType.rect, { x: 0.72, y: 0.48, w: 0.12, h: 0.28, fill: { color }, line: { color } });
   slide.addText(text, { x: 0.92, y: 0.47, w: 5.4, h: 0.25, fontFace: 'Aptos', fontSize: 8.8, bold: true, color, margin: 0, fit: 'shrink' });
@@ -358,7 +364,18 @@ function normalSlide(spec, i) {
       slide.addText(p, { x: 1.78, y: y+0.11, w: 9.35, h: 0.28, fontSize: a.length > 3 ? 12.8 : 14.0, color: C.ink, margin: 0.02, fit: 'shrink' });
     });
   } else if (type === 'workflow') {
-    if (a.length > 5) {
+    if (k === 'FINAL ACTION') {
+      a.forEach((st, idx) => {
+        const x = 0.82 + idx * 2.18;
+        dot(slide, x, 2.35, String(idx+1), [C.teal,C.blue,C.coral,C.green,C.gold][idx%5]);
+        if (idx < a.length - 1) slide.addShape(deck.ShapeType.line, { x: x+0.45, y: 2.57, w: 1.18, h: 0, line: { color: C.line, width: 1.3, endArrowType: 'triangle' } });
+        slide.addText(st, { x: x-0.12, y: 3.02, w: 1.55, h: 0.58, fontSize: 11.0, bold: true, color: C.ink, align: 'center', margin: 0, fit: 'shrink' });
+      });
+      box(slide, 0.92, 4.35, 10.75, 1.12, C.white, 'C9DFE5');
+      slide.addText('Presented by Ian Burton Price', { x: 1.22, y: 4.58, w: 3.55, h: 0.2, fontSize: 11.8, bold: true, color: C.navy, margin: 0 });
+      slide.addText('REALTOR\u00ae | Dalton Wade Real Estate Group\nV.P. of Growth and Partnerships | GoHouse.ai', { x: 1.22, y: 4.88, w: 4.6, h: 0.36, fontSize: 9.8, color: C.gray, margin: 0, fit: 'shrink', breakLine: false });
+      addGoHouseLogo(slide, 8.65, 4.7, 2.15);
+    } else if (a.length > 5) {
       a.forEach((st, idx) => {
         const x = 0.95 + (idx % 3) * 3.85, y = 1.95 + Math.floor(idx / 3) * 1.65;
         box(slide, x, y, 3.2, 1.12, idx % 2 ? C.white : C.sky);
@@ -411,6 +428,7 @@ function normalSlide(spec, i) {
     slide.addText('Instructor', { x: 1.28, y: 2.28, w: 1.4, h: 0.18, fontSize: 9.5, bold: true, color: C.teal, margin: 0 });
     slide.addText(personName, { x: 1.28, y: 2.62, w: 4.55, h: 0.38, fontSize: 22, bold: true, color: C.navy, margin: 0, fit: 'shrink' });
     slide.addText(personTitle, { x: 1.28, y: 3.08, w: 4.55, h: 0.3, fontSize: 12.8, color: C.gray, margin: 0, fit: 'shrink' });
+    addGoHouseLogo(slide, 4.15, 3.42, 1.18);
     slide.addShape(deck.ShapeType.line, { x: 1.28, y: 3.6, w: 1.35, h: 0, line: { color: C.coral, width: 3 } });
     slide.addText(bioBullets[0], { x: 1.28, y: 3.9, w: 4.45, h: 1.28, fontSize: 11.7, color: C.ink, margin: 0.02, fit: 'shrink', breakLine: false });
     slide.addShape(deck.ShapeType.rect, { x: 6.75, y: 1.9, w: 0.14, h: 4.0, fill: { color: C.teal }, line: { color: C.teal } });
@@ -446,7 +464,8 @@ function addSlide(spec, i) {
     slide.addText(a, { x: 0.82, y: 2.56, w: 8.7, h: 0.45, fontSize: 22, color: 'D7EDEE', margin: 0 });
     slide.addShape(deck.ShapeType.line, { x: 0.82, y: 3.34, w: 2.2, h: 0, line: { color: C.coral, width: 4 } });
     addWorkshopPill(slide, 'LIVE WORKSHOP', 0.82, 3.66, C.teal);
-    slide.addText('Presented by Ian Burton Price | GoHouse.ai', { x: 2.72, y: 3.72, w: 4.4, h: 0.16, fontSize: 10.3, bold: true, color: 'D7EDEE', margin: 0 });
+    slide.addText('Presented by Ian Burton Price', { x: 2.72, y: 3.72, w: 2.65, h: 0.16, fontSize: 10.3, bold: true, color: 'D7EDEE', margin: 0 });
+    addGoHouseLogo(slide, 5.18, 3.57, 1.05);
     addOfficialLogoRail(slide, 0.82, 4.72, 0.82);
     slide.addText(b, { x: 0.82, y: 5.95, w: 6.8, h: 0.28, fontSize: 12, color: 'D7EDEE', margin: 0 });
     slide.addText('Practical AI Training for Real Estate Professionals', { x: 0.82, y: 6.3, w: 5.4, h: 0.22, fontSize: 9.5, color: 'AFC8CF', margin: 0 });
@@ -499,6 +518,7 @@ Assets used in the PPTX:
 
 - Native editable PowerPoint shapes, lines, and text boxes.
 - User-provided combined MIAMI REALTORS + RWorld logo asset.
+- User-provided GoHouse.ai logo asset, used only as presenter/professional context on the title, instructor, and final contact/action slides.
 - Legacy separate logo files remain in assets/brand for reference but are not used in this deck.
 
 Recommended optional future assets, if approved/provided:

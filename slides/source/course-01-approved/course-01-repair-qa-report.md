@@ -25,3 +25,4 @@
 - Verified no "founder of GoHouse.ai" language.
 - Verified no repeated "Next: concept -> example -> practice" filler.
 - Verified GoHouse.ai is presenter/professional context only.
+- Added small GoHouse.ai logo placements on the title slide, instructor slide, and final action/contact slide.

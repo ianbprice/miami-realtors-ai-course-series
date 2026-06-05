@@ -280,8 +280,8 @@ Rather than treating AI as a replacement for professional judgment, Ian emphasiz
 - Layout type: workflow
 - Speaker note: To make AI output repeatable, save the prompt, the verified fact block, the tone instruction, the final reviewed version, and the reason it worked.
 
-## 46. Your one-week implementation plan
+## 46. Your one-week implementation plan + contact
 
 - Kicker: FINAL ACTION
 - Layout type: workflow
-- Speaker note: This course provides general education, not legal, financial, brokerage, MLS, or Fair Housing advice. Point attendees to brokerage AI policies, Fair Housing and advertising guidance, MLS rules, and appropriate professionals when needed. Close on action, not a generic thank-you slide.
+- Speaker note: This course provides general education, not legal, financial, brokerage, MLS, or Fair Housing advice. Point attendees to brokerage AI policies, Fair Housing and advertising guidance, MLS rules, and appropriate professionals when needed. Close on action and presenter contact, not a generic thank-you slide.
