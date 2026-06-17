@@ -50,6 +50,18 @@ Use only synthetic lead data. Do not publish real client names, contact info, CR
 
 Do not publish private course transcripts or source PDFs unless rights are confirmed. Public repo materials should use original writing, paraphrased notes, synthetic examples, and links to public tool documentation where useful.
 
+## GitHub Snapshot Policy
+
+GitHub should contain the latest public/current version of each artifact. Older revisions, sent-package duplicates, rendered previews, temporary build output, and private/reference materials are kept locally but ignored by Git.
+
+Local-only revision folders include:
+
+- `local-revisions/`
+- `Assets sent to MiamiRE/`
+- `output/`
+- `slides/previews/`
+- older named syllabus revisions such as `*-v1-*`, `*-v2-*-draft`, and `*-original`
+
 Recommended licensing decision:
 
 - Course text and handouts: Creative Commons Attribution 4.0
@@ -70,14 +82,13 @@ See [LICENSE.md](LICENSE.md), [LICENSE-CONTENT.md](LICENSE-CONTENT.md), and [LIC
 - [Course 3 syllabus](courses/03-ai-online-lead-response-and-nurture.md)
 - [Course 4 syllabus](courses/04-advanced-ai-prompting.md)
 - [Course 5 syllabus](courses/05-ai-lead-magnets-for-realtors.md)
-- [Course 1 slide deck](slides/course-01-ai-for-real-estate-sales.pptx)
-- [Course 1 approved instructor-ready deck](slides/course-01-ai-for-real-estate-sales-approved-instructor-deck.pptx)
+- [Course 1 current instructor-ready deck](slides/course-01-ai-for-real-estate-sales-approved-instructor-deck.pptx)
+- [Course 1 current instructor-ready deck PDF](slides/course-01-ai-for-real-estate-sales-approved-instructor-deck.pdf)
 - [Course 2 slide deck](slides/course-02-ai-lead-conversion.pptx)
 - [Course 3 slide deck](slides/course-03-online-lead-response-and-nurture.pptx)
 - [Student handouts](pdfs/student/)
 - [Instructor guides](pdfs/instructor/)
 - [Board-facing syllabus PDFs](pdfs/syllabi/)
-- [Slide previews](slides/previews/)
 - [Slide generation source](slides/source/)
 - [Lead magnet prompts](prompts/lead-magnet-prompts.md)
 - [Synthetic lead magnet scenarios](examples/synthetic-lead-magnet-scenarios.md)

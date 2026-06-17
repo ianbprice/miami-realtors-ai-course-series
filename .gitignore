@@ -2,6 +2,27 @@
 source-pdfs/
 private/
 
+# Local-only revision/reference material
+local-revisions/
+Assets sent to MiamiRE/
+output/
+
+# Older named course revisions kept locally for reference
+courses/*-syllabus-5-section-*.md
+pdfs/syllabi/*-original.pdf
+pdfs/syllabi/*-v*-*.pdf
+
+# Render/debug previews and alternate antitrust slide variants
+slides/previews/
+slides/miami-realtors-antitrust-policy-slide.pptx
+slides/miami-realtors-antitrust-policy-slide.pdf
+slides/miami-realtors-antitrust-policy-slide-official.pptx
+slides/miami-realtors-antitrust-policy-slide-official.pdf
+
+# Stale Course 1 approved-deck source/revision notes kept locally
+slides/source/course-01-approved/build-approved-course01-deck.mjs
+slides/source/course-01-approved/course-01-*.md
+
 # Temporary outputs
 tmp/
 .cache/
