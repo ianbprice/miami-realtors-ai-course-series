@@ -8,14 +8,14 @@
 
 Length: 2 hours  
 Built material: 2.5 to 3 hours, so sections can expand or compress  
-Audience: Realtors who are curious about AI but not yet using it consistently  
+Audience: Real Estate Agents who are curious about AI but not yet using it consistently  
 Format: Instructor-led presentation, practical examples, group discussion, and optional hands-on prompt exercises  
 
 Related course topics have been organized into five instructional sections to support a cohesive two-hour classroom experience.
 
 ## Course Description
 
-This practical class helps Realtors understand how AI can fit into their daily business without needing to become technical experts. Agents will learn how to use AI for client communication, lead follow-up, listing preparation, buyer and seller conversations, market explanations, content creation, appointment preparation, and daily productivity.
+This practical class helps Real Estate Agents understand how AI can fit into their daily business without needing to become technical experts. Agents will learn how to use AI for client communication, lead follow-up, listing preparation, buyer and seller conversations, market explanations, content creation, appointment preparation, and daily productivity.
 
 The focus is practical use, professional judgment, and repeatable workflows. Agents leave with examples, reusable prompts, a simple daily AI routine, and clear guardrails for responsible use.
 
@@ -159,4 +159,3 @@ Agents leave with:
 - Follow brokerage policies, MLS rules, advertising rules, consumer communication rules, opt-out requirements, and applicable platform requirements.
 - Do not allow AI to auto-send client or lead communication unless the tool, workflow, permissions, and brokerage policy clearly allow it.
 - Use AI as drafting, organizing, and preparation support, not as final professional judgment.
-
