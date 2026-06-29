@@ -10,7 +10,7 @@ I put the class resources here:
 
 [RESOURCE PAGE LINK]
 
-You’ll find the prompt library, 7-day implementation plan, responsible AI checklist, workflow checklist, and the class deck PDF.
+The prompt library, 7-day implementation plan, responsible AI checklist, workflow checklist, and class deck PDF link are all on that page, so you can bookmark it and come back anytime.
 
 My suggestion: pick one workflow this week, use one prompt three times, and save what works.
 

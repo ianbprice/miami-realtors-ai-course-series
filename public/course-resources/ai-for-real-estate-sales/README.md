@@ -1,6 +1,6 @@
-# AI for Real Estate Sales Course Resources
+# AI for Real Estate Sales Landing Page Package
 
-Student resource package for the approved course:
+Student resource package for:
 
 **AI for Real Estate Sales: From Confusion to Daily Use**
 
@@ -8,34 +8,35 @@ Recommended landing page:
 
 `https://gohouse.ai/miami-ai-course`
 
+## Current Structure
+
+This package is intentionally landing-page-first.
+
+Keep all student resources directly on the GoHouse.ai page:
+
+- prompt library
+- 7-day implementation plan
+- AI workflow checklist
+- responsible AI checklist
+- GoHouse.ai lead conversion resource
+- student follow-up copy
+
+Do not create separate PDF downloads for those resources.
+
 ## Files
 
-- `landing-page-copy.md` - full landing page copy, SEO metadata, form strategy, thank-you copy, hosting plan, and assumptions.
-- `real-estate-ai-prompt-library.md` / `.pdf` - copy-ready prompts for real estate agents.
-- `7-day-ai-implementation-plan.md` / `.pdf` - simple post-class implementation plan.
-- `ai-workflow-checklist-for-agents.md` / `.pdf` - where AI fits into daily real estate work.
-- `responsible-ai-use-checklist.md` / `.pdf` - compliance-aware review checklist.
-- `gohouse-ai-lead-conversion-resource.md` / `.pdf` - soft educational GoHouse.ai lead-conversion resource.
-- `student-follow-up-email.md` - short email Ian can send after the class.
-- `ai-for-real-estate-sales-class-deck.pdf` - student-facing copy of the course deck PDF.
-- `assets/qr-gohouse-miami-ai-course.png` - QR code for the final course slide.
+- `landing-page-copy.md` - full page copy and all inline student resources.
+- `student-follow-up-email.md` - short email Ian can send after class.
+- `assets/qr-gohouse-miami-ai-course.png` - QR code used on the final course slide.
 
-## Hosting Recommendation
+The only PDF students should download is the existing course deck PDF in GitHub:
 
-Host public downloads from the GoHouse.ai app/site public folder and keep this repository folder as the source package.
+`slides/course-01-ai-for-real-estate-sales-approved-instructor-deck.pdf`
 
-Suggested public path:
+Recommended live deck link:
 
-```text
-/course-resources/ai-for-real-estate-sales/
-```
-
-Suggested landing page:
-
-```text
-/miami-ai-course
-```
+`https://github.com/ianbprice/miami-realtors-ai-course-series/raw/main/slides/course-01-ai-for-real-estate-sales-approved-instructor-deck.pdf`
 
 ## Compliance Note
 
-These files are educational resources. They do not provide legal, financial, tax, brokerage, MLS, Fair Housing, advertising, or compliance advice. Agents must verify facts, follow brokerage policy, protect confidential information, and review all AI-generated content before use.
+These materials are educational resources. They do not provide legal, financial, tax, brokerage, MLS, Fair Housing, advertising, or compliance advice. Agents must verify facts, follow brokerage policy, protect confidential information, and review all AI-generated content before use.
