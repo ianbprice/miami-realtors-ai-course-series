@@ -2,15 +2,15 @@
 
 Recommended URL: `https://gohouse.ai/miami-ai-course`
 
-Slide deck PDF link:
+Class deck PDF link:
 `https://github.com/ianbprice/miami-realtors-ai-course-series/raw/main/slides/course-01-ai-for-real-estate-sales-approved-instructor-deck.pdf`
 
 ## Page Positioning
 
-This should be a reference page students can return to after class. Do not present the prompt library, checklists, or implementation plan as separate PDF downloads. Keep the full resource content directly on the landing page.
+This is a student reference page, not a download library. Keep the prompt library, checklists, implementation plan, and GoHouse.ai resource directly on the landing page so students can bookmark it and return later.
 
 Primary promise:
-Get the practical AI tools, prompts, and implementation plan from the class.
+Turn the AI class into one practical real estate workflow.
 
 GoHouse.ai role:
 GoHouse.ai is the resource host and a practical next step for agents, teams, brokerages, and platforms that want help applying AI to online lead follow-up and intent signals. It should not be the headline or the main offer.
@@ -20,22 +20,82 @@ GoHouse.ai is the resource host and a practical next step for agents, teams, bro
 ### Hero
 
 Headline:
-Get the practical AI tools, prompts, and implementation plan from the class.
+Turn the AI class into your first real estate workflow.
 
 Subheadline:
-Use this page as your post-class reference for **AI for Real Estate Sales: From Confusion to Daily Use**. Copy the prompts, follow the 7-day plan, use the checklists, and download the class deck PDF from GitHub when you need it.
+Copy the prompts, follow the 7-day plan, review the checklists, and download the class deck so you can start using AI safely and practically this week.
 
 Primary CTA:
-Jump to the prompt library
+Start with the 7-day plan
 
 Secondary CTA:
 Download the class deck PDF
 
-Deck PDF link:
+Deck PDF URL:
 `https://github.com/ianbprice/miami-realtors-ai-course-series/raw/main/slides/course-01-ai-for-real-estate-sales-approved-instructor-deck.pdf`
 
 Small trust line:
 Created for real estate agents, brokers, team leaders, and MIAMI REALTORS&reg; + RWorld students who want practical, responsible AI workflows.
+
+### Start Here
+
+Use the page in this order:
+
+1. Download or bookmark the class deck.
+2. Pick one workflow you repeat every week.
+3. Copy one prompt from the library.
+4. Use it three times.
+5. Save what worked.
+
+Short note:
+Do not try to automate your whole business this week. Start with one repeatable task and build from there.
+
+### Resource Cards
+
+#### Prompt Library
+
+Copy-ready prompts for lead follow-up, buyer prep, seller prep, listing copy, social content, CRM notes, objection handling, and compliance review.
+
+CTA:
+Go to prompt library
+
+#### 7-Day Implementation Plan
+
+A simple plan to build one repeatable AI workflow this week without turning AI into another project you never finish.
+
+CTA:
+Start the 7-day plan
+
+#### AI Workflow Checklist
+
+A practical checklist to decide where AI fits into lead response, follow-up, client communication, listing prep, marketing, operations, and CRM notes.
+
+CTA:
+Review workflow checklist
+
+#### Responsible AI Checklist
+
+A quick review process before using AI-generated output with clients, leads, listings, public marketing, CRM workflows, or consumer communications.
+
+CTA:
+Review responsible AI checklist
+
+#### Class Deck PDF
+
+The approved course slide deck as a PDF you can save or print.
+
+CTA:
+Download the class deck PDF
+
+### Who This Is For
+
+This page is for you if:
+
+- You attended the class and want the prompts in one place.
+- You want to use AI without sounding automated.
+- You want better lead follow-up, client messages, and listing prep.
+- You want a simple first workflow instead of another tool to manage.
+- You lead a team and want a responsible AI starting point.
 
 ### Short Intro From Ian
 
@@ -47,29 +107,16 @@ Presented by Ian Burton Price
 REALTOR&reg; | Dalton Wade Real Estate Group  
 V.P. of Growth and Partnerships | GoHouse.ai
 
-### What You'll Find On This Page
-
-- The full class deck PDF link hosted on GitHub.
-- A copy-ready AI prompt library for real estate sales workflows.
-- A 7-day implementation plan for putting one workflow into practice.
-- An AI workflow checklist to identify where AI fits into your business.
-- A responsible AI use checklist for privacy, Fair Housing, MLS, advertising, brokerage policy, and professional review.
-- A short GoHouse.ai resource on using buyer and seller intent signals to improve online lead follow-up.
-
-## B. Resource Section
-
-### Class Deck PDF
-
-Use this link to download or view the existing course deck PDF from GitHub:
+## B. Class Deck PDF
 
 Button label:
-Download class deck PDF from GitHub
+Download the class deck PDF
 
 URL:
 `https://github.com/ianbprice/miami-realtors-ai-course-series/raw/main/slides/course-01-ai-for-real-estate-sales-approved-instructor-deck.pdf`
 
-Suggested note:
-The rest of the resources are built directly into this page so you can bookmark it and return when you need a prompt, checklist, or implementation reminder.
+Small note:
+Opens as a PDF you can save or print. The prompts, checklists, and implementation plan are built directly into this page so you can bookmark it and come back anytime.
 
 ## C. Full Prompt Library
 
@@ -391,19 +438,19 @@ Quick review lens:
 3. Is it fair?
 4. Is it yours?
 
-## G. GoHouse.ai Soft Introduction Copy
+## G. GoHouse.ai Bridge Section
 
 ### Section Headline
 
-Want help applying AI to online lead follow-up?
+Want to apply this to your actual online leads?
 
 ### Body Copy
 
-Most real estate websites can capture a lead. The harder part is knowing what that lead did, what changed, who came back, and why the timing may matter now.
+In class, we used AI to improve the message. GoHouse.ai helps identify when the message matters most.
 
-That missing behavior is often the difference between a generic follow-up and a useful conversation.
+Most real estate websites capture leads, but they do not always show which people are showing real intent, what they came back to look at, or why now may be the right time to follow up.
 
-GoHouse.ai helps agents, teams, brokerages, and real estate platforms understand online buyer and seller intent signals so follow-up can be more relevant.
+GoHouse.ai helps agents, teams, brokerages, and real estate platforms turn online behavior into better follow-up actions without replacing the CRM or giving agents another system to learn.
 
 Supporting copy:
 
@@ -430,21 +477,8 @@ I noticed you were looking at homes in [AREA] again. Are you comparing options t
 Why it works:
 The stronger message uses context, gives a reason to respond, and moves toward a useful next step.
 
-### How This Fits The Class
-
-The class focused on practical AI workflows:
-
-- Better first responses.
-- More useful follow-up.
-- Lead-source context.
-- CRM notes and next-best-message drafts.
-- Appointment-oriented conversations.
-- Responsible review before sending.
-
-GoHouse.ai extends that idea by helping surface intent signals from online behavior so agents and teams can apply better follow-up at the right time.
-
 Demo CTA:
-See how GoHouse.ai applies this to online lead follow-up
+See how GoHouse.ai turns lead behavior into better follow-up
 
 Demo link placeholder:
 `[CALENDLY LINK]`
@@ -452,14 +486,32 @@ Demo link placeholder:
 Responsible use note:
 GoHouse.ai and AI-assisted follow-up should support agent judgment, brokerage policy, privacy requirements, consumer communication rules, and fair, accurate communication. Do not use behavioral context to make discriminatory assumptions or target protected classes.
 
-## H. GitHub/Public File Hosting Plan
+## H. Class Feedback And Review
+
+### Headline
+
+Was the class helpful?
+
+### Body
+
+If this session helped you think differently about AI in your real estate business, I would appreciate your honest feedback. Your review helps other real estate professionals decide whether the class is worth their time.
+
+Buttons:
+
+- Leave Class Feedback
+- Leave a Google Review
+
+Suggested placement:
+Place this after the GoHouse.ai section and before the footer disclaimer. Keep it visually secondary to the resource and GoHouse CTAs.
+
+## I. GitHub/Public File Hosting Plan
 
 Recommended approach:
 
 - Host the landing page on GoHouse.ai at `/miami-ai-course`.
 - Keep all student resource content directly on the page.
 - Do not create separate PDF downloads for the prompt library, implementation plan, workflow checklist, responsible AI checklist, or GoHouse.ai resource.
-- Link only to the existing slide deck PDF in GitHub.
+- Link only to the existing slide deck PDF.
 - Keep the GitHub repo as the source and version history for the deck and page copy.
 
 Recommended public page structure:
@@ -467,14 +519,18 @@ Recommended public page structure:
 ```text
 /miami-ai-course
   hero
+  start here
+  resource cards
+  who this is for
   intro from Ian
-  class deck GitHub PDF link
+  class deck PDF link
   prompt library
   7-day implementation plan
   AI workflow checklist
   responsible AI checklist
-  GoHouse.ai lead conversion resource
+  GoHouse.ai bridge section
   optional demo CTA
+  class feedback / Google review
   footer disclaimer
 ```
 
@@ -491,7 +547,7 @@ slides/
   course-01-ai-for-real-estate-sales-approved-instructor-deck.pdf
 ```
 
-## I. Page SEO Metadata
+## J. Page SEO Metadata
 
 Page title:
 AI for Real Estate Sales Course Resources
@@ -511,7 +567,7 @@ AI for Real Estate Sales: Student Resource Hub
 Open Graph description:
 Practical prompts, checklists, implementation tools, and the class deck PDF link from the AI for Real Estate Sales course.
 
-## J. Suggested Form Fields
+## K. Suggested Form Fields
 
 Recommended gating:
 
@@ -533,7 +589,7 @@ Ask about applying this to my lead follow-up
 
 Keep the form short. Do not require a phone number for resource access.
 
-## K. Thank-You Message After Optional Form Submission
+## L. Thank-You Message After Optional Form Submission
 
 Headline:
 Thanks - I received your note.
@@ -550,7 +606,7 @@ Book a 15-minute GoHouse.ai walkthrough
 Small text:
 No pressure. Bring one lead follow-up problem or website workflow you want to improve.
 
-## L. Student Follow-Up Email
+## M. Student Follow-Up Email
 
 Subject:
 AI for Real Estate Sales class resources
@@ -581,7 +637,7 @@ REALTOR&reg; | Dalton Wade Real Estate Group
 V.P. of Growth and Partnerships | GoHouse.ai
 ```
 
-## M. Assumptions Made
+## N. Assumptions Made
 
 - The live landing page URL will be `https://gohouse.ai/miami-ai-course` unless replaced later.
 - The existing final course deck PDF remains hosted in GitHub under `slides/`.
@@ -589,8 +645,9 @@ V.P. of Growth and Partnerships | GoHouse.ai
 - GoHouse.ai is positioned as a practical next step, not as the course sponsor brand or required tool.
 - The page is intended for post-class student access and may also be shared with interested agents.
 - The page content is educational and should be customized for brokerage policy, local practice, and individual voice.
+- The class feedback and Google review URLs still need final links.
 
-## N. Files That Should Exist After This Revision
+## O. Files That Should Exist After This Revision
 
 Keep:
 
@@ -601,7 +658,7 @@ Keep:
 - `slides/course-01-ai-for-real-estate-sales-approved-instructor-deck.pdf`
 - `slides/course-01-ai-for-real-estate-sales-approved-instructor-deck.pptx`
 
-Remove from the public resource package:
+Do not recreate in the public resource package:
 
 - Separate prompt library PDF
 - Separate implementation plan PDF
