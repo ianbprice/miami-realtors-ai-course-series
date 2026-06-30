@@ -6,7 +6,7 @@ Student resource package for:
 
 Recommended landing page:
 
-`https://gohouse.ai/miami-ai-course`
+`https://gohouse.ai/classes/ai-for-real-estate-sales`
 
 ## Current Structure
 
@@ -27,7 +27,7 @@ Do not create separate PDF downloads for those resources.
 
 - `landing-page-copy.md` - full page copy and all inline student resources.
 - `student-follow-up-email.md` - short email Ian can send after class.
-- `assets/qr-gohouse-miami-ai-course.png` - QR code used on the final course slide.
+- `assets/qr-gohouse-ai-for-real-estate-sales.png` - QR code used on the final course slide.
 
 The only PDF students should download is the existing course deck PDF in GitHub:
 

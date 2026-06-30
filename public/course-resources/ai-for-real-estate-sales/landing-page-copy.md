@@ -1,6 +1,6 @@
 # AI for Real Estate Sales Student Resource Landing Page Package
 
-Recommended URL: `https://gohouse.ai/miami-ai-course`
+Recommended URL: `https://gohouse.ai/classes/ai-for-real-estate-sales`
 
 Class deck PDF link:
 `https://github.com/ianbprice/miami-realtors-ai-course-series/raw/main/slides/course-01-ai-for-real-estate-sales-approved-instructor-deck.pdf`
@@ -508,7 +508,7 @@ Place this after the GoHouse.ai section and before the footer disclaimer. Keep i
 
 Recommended approach:
 
-- Host the landing page on GoHouse.ai at `/miami-ai-course`.
+- Host the landing page on GoHouse.ai at `/classes/ai-for-real-estate-sales`.
 - Keep all student resource content directly on the page.
 - Do not create separate PDF downloads for the prompt library, implementation plan, workflow checklist, responsible AI checklist, or GoHouse.ai resource.
 - Link only to the existing slide deck PDF.
@@ -517,7 +517,7 @@ Recommended approach:
 Recommended public page structure:
 
 ```text
-/miami-ai-course
+/classes/ai-for-real-estate-sales
   hero
   start here
   resource cards
@@ -541,7 +541,7 @@ public/course-resources/ai-for-real-estate-sales/
   landing-page-copy.md
   README.md
   student-follow-up-email.md
-  assets/qr-gohouse-miami-ai-course.png
+  assets/qr-gohouse-ai-for-real-estate-sales.png
 
 slides/
   course-01-ai-for-real-estate-sales-approved-instructor-deck.pdf
@@ -559,7 +559,7 @@ Meta description:
 Copy practical AI prompts, checklists, and a 7-day implementation plan from the AI for Real Estate Sales class for real estate agents.
 
 URL slug:
-`/miami-ai-course`
+`/classes/ai-for-real-estate-sales`
 
 Open Graph title:
 AI for Real Estate Sales: Student Resource Hub
@@ -639,7 +639,7 @@ V.P. of Growth and Partnerships | GoHouse.ai
 
 ## N. Assumptions Made
 
-- The live landing page URL will be `https://gohouse.ai/miami-ai-course` unless replaced later.
+- The live landing page URL will be `https://gohouse.ai/classes/ai-for-real-estate-sales` unless replaced later.
 - The existing final course deck PDF remains hosted in GitHub under `slides/`.
 - Students should use the landing page as the primary reference, not download separate PDFs for prompts or checklists.
 - GoHouse.ai is positioned as a practical next step, not as the course sponsor brand or required tool.
@@ -654,7 +654,7 @@ Keep:
 - `public/course-resources/ai-for-real-estate-sales/landing-page-copy.md`
 - `public/course-resources/ai-for-real-estate-sales/README.md`
 - `public/course-resources/ai-for-real-estate-sales/student-follow-up-email.md`
-- `public/course-resources/ai-for-real-estate-sales/assets/qr-gohouse-miami-ai-course.png`
+- `public/course-resources/ai-for-real-estate-sales/assets/qr-gohouse-ai-for-real-estate-sales.png`
 - `slides/course-01-ai-for-real-estate-sales-approved-instructor-deck.pdf`
 - `slides/course-01-ai-for-real-estate-sales-approved-instructor-deck.pptx`
 
